@@ -8,13 +8,21 @@ import { MyApp } from './app.component';
 import { IntroScreen } from '../pages/IntroScreen/IntroScreen';
 import { LoginScreen } from '../pages/LoginScreen/LoginScreen';
 import { LoginDoneScreen } from '../pages/LoginDoneScreen/LoginDoneScreen';
+import { ApplicationLogScreen } from '../pages/ApplicationLogScreen/ApplicationLogScreen';
+import { NewJob } from '../pages/ApplicationLogScreen/NewJob/NewJob';
+import {CurrentJob} from "../pages/ApplicationLogScreen/CurrentJob/CurrentJob";
+import {PreviousJob} from "../pages/ApplicationLogScreen/PreviousJob/PreviousJob";
 
 @NgModule({
   declarations: [
     MyApp,
     IntroScreen,
     LoginScreen,
-    LoginDoneScreen
+    LoginDoneScreen,
+    ApplicationLogScreen,
+    NewJob,
+    CurrentJob,
+    PreviousJob,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +33,11 @@ import { LoginDoneScreen } from '../pages/LoginDoneScreen/LoginDoneScreen';
     MyApp,
     IntroScreen,
     LoginScreen,
-    LoginDoneScreen
+    LoginDoneScreen,
+    ApplicationLogScreen,
+    NewJob,
+    CurrentJob,
+    PreviousJob,
   ],
   providers: [
     StatusBar,
