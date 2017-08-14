@@ -1,0 +1,28 @@
+page-loghours {
+
+  .scroll-content {
+
+    overflow-y: hidden;
+    background: none;
+
+    .weight-fixed {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 20px;
+
+      .username-input {
+        background-color: lightgray;
+      }
+
+      .password-input {
+        background-color: lightgray;
+      }
+    }
+
+    .weight-wrapper {
+      width: 100%;
+      text-align: center;
+      margin-top: 50px;
+    }
+  }
+}

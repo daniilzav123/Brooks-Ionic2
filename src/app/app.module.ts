@@ -9,9 +9,14 @@ import { IntroScreen } from '../pages/IntroScreen/IntroScreen';
 import { LoginScreen } from '../pages/LoginScreen/LoginScreen';
 import { LoginDoneScreen } from '../pages/LoginDoneScreen/LoginDoneScreen';
 import { ApplicationLogScreen } from '../pages/ApplicationLogScreen/ApplicationLogScreen';
+import { EquipmentLogScreen } from '../pages/EquipmentLogScreen/EquipmentLogScreen';
+import { EquipmentSelectedScreen } from '../pages/EquipmentLogScreen/EquipmentSelectedScreen/EquipmentSelectedScreen';
+import { LogHours } from '../pages/EquipmentLogScreen/EquipmentSelectedScreen/LogHours/LogHours';
+import { RoutineMaintenance } from '../pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/RoutineMaintenance';
 import { NewJob } from '../pages/ApplicationLogScreen/NewJob/NewJob';
 import {CurrentJob} from "../pages/ApplicationLogScreen/CurrentJob/CurrentJob";
 import {PreviousJob} from "../pages/ApplicationLogScreen/PreviousJob/PreviousJob";
+import {ScheduledMaintenance} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/ScheduledMaintenance/ScheduledMaintenance";
 
 @NgModule({
   declarations: [
@@ -23,6 +28,11 @@ import {PreviousJob} from "../pages/ApplicationLogScreen/PreviousJob/PreviousJob
     NewJob,
     CurrentJob,
     PreviousJob,
+    EquipmentLogScreen,
+    EquipmentSelectedScreen,
+    LogHours,
+    RoutineMaintenance,
+    ScheduledMaintenance
   ],
   imports: [
     BrowserModule,
@@ -38,6 +48,11 @@ import {PreviousJob} from "../pages/ApplicationLogScreen/PreviousJob/PreviousJob
     NewJob,
     CurrentJob,
     PreviousJob,
+    EquipmentLogScreen,
+    EquipmentSelectedScreen,
+    LogHours,
+    RoutineMaintenance,
+    ScheduledMaintenance
   ],
   providers: [
     StatusBar,

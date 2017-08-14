@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams} from 'ionic-angular';
 import {ApplicationLogScreen} from "../ApplicationLogScreen/ApplicationLogScreen";
+import {EquipmentLogScreen} from "../EquipmentLogScreen/EquipmentLogScreen";
 
 @Component({
   selector: 'page-logindonescreen',
@@ -20,7 +21,7 @@ export class LoginDoneScreen {
   }
 
   onEquipmentLog() {
-
+    this.navCtrl.push(EquipmentLogScreen);
   }
 
   onReminder() {
