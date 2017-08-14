@@ -1,7 +1,20 @@
 <ion-content padding>
+
+  <div class="iconback-global" (click)="onBack();"></div>
+
+  <div class="back-padding-vertical"></div>
+
+  <div class="weight-fixed">
+    <ion-label>Username</ion-label>
+    <ion-input class="username-input"></ion-input>
+  </div>
+
+  <div class="weight-fixed">
+    <ion-label>Password</ion-label>
+    <ion-input class="username-input" type="password"></ion-input>
+  </div>
+
   <div class="weight-wrapper">
-    <div class="logo-image"></div>
-    <ion-label class="application-label">Login Screen</ion-label>
     <button ion-button class="login-btn" (click)="onLogin();">Login</button>
   </div>
 </ion-content>

@@ -1,0 +1,24 @@
+page-logindonescreen {
+
+  .scroll-content {
+
+    overflow-y: hidden;
+    background: none;
+
+    .back-padding-vertical {
+      height: 100px;
+    }
+
+    .weight-wrapper {
+      width: 100%;
+      text-align: center;
+
+      .login-btn {
+        margin-top: 50px;
+        width: 220px;
+        height: 40px;
+        background-color: lightgray;
+      }
+    }
+  }
+}

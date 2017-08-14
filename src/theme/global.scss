@@ -1,0 +1,49 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// Global CSS
+// --------------------------------------------------
+// Put CSS rules here that you want to apply globally.
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+//
+// App Shared Sass variables belong in app.variables.scss.
+
+.iconback-global {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 15px;
+  height: 25px;
+  display: inline-block;
+  background-image: url('../assets/images/iconback.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 30px;
+}
+
+// App iOS Only Sass
+// --------------------------------------------------
+// CSS that should only apply to the iOS app
+
+.ios {
+}
+
+
+// App Material Design Only Sass
+// --------------------------------------------------
+// CSS that should only apply to the Material Design app
+
+.md {
+}
+
+
+// App Windows Only Sass
+// --------------------------------------------------
+// CSS that should only apply to the Windows app
+
+.wp {
+
+}

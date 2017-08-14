@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams} from 'ionic-angular';
-import {LoginDoneScreen} from "../LoginDoneScreen/LoginDoneScreen";
 
 @Component({
-  selector: 'page-loginscreen',
-  templateUrl: 'LoginScreen.html'
+  selector: 'page-logindonescreen',
+  templateUrl: 'LoginDoneScreen.html'
 })
-export class LoginScreen {
+export class LoginDoneScreen {
 
   constructor(
     public navCtrl: NavController,
@@ -15,11 +14,19 @@ export class LoginScreen {
 
   }
 
-  onLogin() {
-    this.navCtrl.push(LoginDoneScreen);
+  onApplicationLog() {
+
   }
 
+  onEquipmentLog() {
+
+  }
+
+  onReminder() {
+  }
+  
   onBack() {
     this.navCtrl.pop();
   }
+
 }

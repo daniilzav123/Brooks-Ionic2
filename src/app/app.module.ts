@@ -7,12 +7,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { IntroScreen } from '../pages/IntroScreen/IntroScreen';
 import { LoginScreen } from '../pages/LoginScreen/LoginScreen';
+import { LoginDoneScreen } from '../pages/LoginDoneScreen/LoginDoneScreen';
 
 @NgModule({
   declarations: [
     MyApp,
     IntroScreen,
-    LoginScreen
+    LoginScreen,
+    LoginDoneScreen
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { LoginScreen } from '../pages/LoginScreen/LoginScreen';
   entryComponents: [
     MyApp,
     IntroScreen,
-    LoginScreen
+    LoginScreen,
+    LoginDoneScreen
   ],
   providers: [
     StatusBar,
