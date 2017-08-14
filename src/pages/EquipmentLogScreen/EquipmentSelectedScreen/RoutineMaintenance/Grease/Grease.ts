@@ -21,4 +21,8 @@ export class Grease {
   onMachineWash() {
 
   }
+
+  onSubmit() {
+    this.navCtrl.pop();
+  }
 }

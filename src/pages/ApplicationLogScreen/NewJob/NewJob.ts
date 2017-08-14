@@ -33,4 +33,8 @@ export class NewJob {
   onNotes() {
     this.navCtrl.push(Notes);
   }
+
+  onSubmit() {
+    this.navCtrl.pop();
+  }
 }
