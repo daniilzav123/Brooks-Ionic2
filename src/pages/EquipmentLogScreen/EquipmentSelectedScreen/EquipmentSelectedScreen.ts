@@ -3,6 +3,7 @@ import { NavController, NavParams} from 'ionic-angular';
 import {LogHours} from "./LogHours/LogHours";
 import {RoutineMaintenance} from "./RoutineMaintenance/RoutineMaintenance";
 import {ScheduledMaintenance} from "./ScheduledMaintenance/ScheduledMaintenance";
+import {Repairs} from "./Repairs/Repairs";
 
 @Component({
   selector: 'page-equipmentselectedscreen',
@@ -31,5 +32,9 @@ export class EquipmentSelectedScreen {
 
   onScheduledMaint() {
     this.navCtrl.push(ScheduledMaintenance);
+  }
+
+  onRepairs() {
+    this.navCtrl.push(Repairs);
   }
 }

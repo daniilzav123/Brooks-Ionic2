@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams} from 'ionic-angular';
+import {NewSchedule} from "./NewSchedule/NewSchedule";
 
 @Component({
   selector: 'page-scheduledmaintenance',
@@ -18,4 +19,7 @@ export class ScheduledMaintenance {
     this.navCtrl.pop();
   }
 
+  onNewSchedule() {
+    this.navCtrl.push(NewSchedule);
+  }
 }

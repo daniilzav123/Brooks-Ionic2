@@ -17,6 +17,12 @@ import { NewJob } from '../pages/ApplicationLogScreen/NewJob/NewJob';
 import {CurrentJob} from "../pages/ApplicationLogScreen/CurrentJob/CurrentJob";
 import {PreviousJob} from "../pages/ApplicationLogScreen/PreviousJob/PreviousJob";
 import {ScheduledMaintenance} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/ScheduledMaintenance/ScheduledMaintenance";
+import {NewSchedule} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/ScheduledMaintenance/NewSchedule/NewSchedule";
+import {Repairs} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/Repairs/Repairs";
+import {Notes} from "../pages/ApplicationLogScreen/NewJob/Notes/Notes";
+import {MachineWash} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/MachineWash/MachineWash";
+import {Grease} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/Grease/Grease";
+import {OtherRoutine} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/OtherRoutine/OtherRoutine";
 
 @NgModule({
   declarations: [
@@ -32,7 +38,13 @@ import {ScheduledMaintenance} from "../pages/EquipmentLogScreen/EquipmentSelecte
     EquipmentSelectedScreen,
     LogHours,
     RoutineMaintenance,
-    ScheduledMaintenance
+    ScheduledMaintenance,
+    NewSchedule,
+    Repairs,
+    Notes,
+    MachineWash,
+    Grease,
+    OtherRoutine,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +64,13 @@ import {ScheduledMaintenance} from "../pages/EquipmentLogScreen/EquipmentSelecte
     EquipmentSelectedScreen,
     LogHours,
     RoutineMaintenance,
-    ScheduledMaintenance
+    ScheduledMaintenance,
+    NewSchedule,
+    Repairs,
+    Notes,
+    MachineWash,
+    Grease,
+    OtherRoutine,
   ],
   providers: [
     StatusBar,

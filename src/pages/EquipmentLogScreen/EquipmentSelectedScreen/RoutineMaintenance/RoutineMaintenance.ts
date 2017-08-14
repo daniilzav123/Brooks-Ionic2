@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams} from 'ionic-angular';
+import {MachineWash} from "./MachineWash/MachineWash";
+import {Grease} from "./Grease/Grease";
+import {OtherRoutine} from "./OtherRoutine/OtherRoutine";
 
 @Component({
   selector: 'page-routinemaintenance',
@@ -19,6 +22,14 @@ export class RoutineMaintenance {
   }
 
   onMachineWash() {
+    this.navCtrl.push(MachineWash);
+  }
 
+  onGrease() {
+    this.navCtrl.push(Grease);
+  }
+
+  onOtherRoutine() {
+    this.navCtrl.push(OtherRoutine);
   }
 }

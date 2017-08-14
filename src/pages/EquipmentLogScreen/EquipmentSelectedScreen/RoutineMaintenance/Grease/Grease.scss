@@ -1,0 +1,34 @@
+page-grease {
+
+  .scroll-content {
+
+    overflow-y: hidden;
+    background: none;
+
+    .weight-wrapper {
+      width: 100%;
+      text-align: center;
+
+      .login-btn {
+        margin-top: 50px;
+        width: 220px;
+        height: 40px;
+        background-color: lightgray;
+      }
+    }
+
+    .weight-fixed {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 50px;
+
+      .username-input {
+        background-color: lightgray;
+      }
+
+      .password-input {
+        background-color: lightgray;
+      }
+    }
+  }
+}

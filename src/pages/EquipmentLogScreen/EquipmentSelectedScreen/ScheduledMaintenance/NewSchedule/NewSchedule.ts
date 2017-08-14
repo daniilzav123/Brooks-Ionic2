@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams} from 'ionic-angular';
-import {Notes} from "./Notes/Notes";
 
 @Component({
-  selector: 'page-newjob',
-  templateUrl: 'NewJob.html'
+  selector: 'page-newschedule',
+  templateUrl: 'NewSchedule.html'
 })
-export class NewJob {
+export class NewSchedule {
 
   constructor(
     public navCtrl: NavController,
@@ -15,22 +14,11 @@ export class NewJob {
 
   }
 
-  onCreateNewJob() {
-
-  }
-
-  onCurrentJobReport() {
-
-  }
-
-  onPrevious() {
-  }
-
   onBack() {
     this.navCtrl.pop();
   }
 
-  onNotes() {
-    this.navCtrl.push(Notes);
+  onSubmit() {
+    this.navCtrl.pop();
   }
 }
