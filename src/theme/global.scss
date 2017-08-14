@@ -32,6 +32,16 @@
   height: 40px;
 }
 
+.global-submit-button {
+  position: absolute;
+  width: 60%;
+  height: 40px;
+  left: 20%;
+  bottom: 40px;
+  background-color: lightgray;
+  color: #f53d3d;
+}
+
 // App iOS Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the iOS app
