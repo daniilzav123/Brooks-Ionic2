@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { IntroScreen } from '../pages/IntroScreen/IntroScreen';
@@ -23,6 +24,9 @@ import {Notes} from "../pages/ApplicationLogScreen/NewJob/Notes/Notes";
 import {MachineWash} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/MachineWash/MachineWash";
 import {Grease} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/Grease/Grease";
 import {OtherRoutine} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/OtherRoutine/OtherRoutine";
+
+import {ApiService} from '../services/apiService';
+import {Spinner} from '../services/spinnerService';
 
 @NgModule({
   declarations: [
@@ -48,6 +52,7 @@ import {OtherRoutine} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -75,6 +80,8 @@ import {OtherRoutine} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/
   providers: [
     StatusBar,
     SplashScreen,
+    ApiService,
+    Spinner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
