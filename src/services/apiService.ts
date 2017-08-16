@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Spinner } from './spinnerService';
 
-const API_BASEURL = 'http://172.20.11.60/Brooks/public/';
+const API_BASEURL = 'http://dan.wolodeploy.com/public';
 
 @Injectable()
 export class ApiService {
