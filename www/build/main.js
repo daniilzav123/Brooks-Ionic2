@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 106:
+/***/ 107:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,11 +13,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 106;
+webpackEmptyAsyncContext.id = 107;
 
 /***/ }),
 
-/***/ 148:
+/***/ 149:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -30,18 +30,18 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 148;
+webpackEmptyAsyncContext.id = 149;
 
 /***/ }),
 
-/***/ 193:
+/***/ 194:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IntroScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LoginScreen_LoginScreen__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LoginScreen_LoginScreen__ = __webpack_require__(195);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -76,15 +76,15 @@ IntroScreen = __decorate([
 
 /***/ }),
 
-/***/ 194:
+/***/ 195:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_apiService__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_apiService__ = __webpack_require__(98);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -112,7 +112,7 @@ var LoginScreen = (function () {
             username: this.username,
             password: this.password
         };
-        this.apiService.post('/Api/APP', data, 'Logging in...').subscribe(function (data) {
+        this.apiService.post('/login', data, 'Logging in...').subscribe(function (data) {
             console.log('DATA', data);
             _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__["a" /* LoginDoneScreen */]);
         }, function (error) {
@@ -137,15 +137,15 @@ LoginScreen = __decorate([
 
 /***/ }),
 
-/***/ 195:
+/***/ 196:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginDoneScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ApplicationLogScreen_ApplicationLogScreen__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__EquipmentLogScreen_EquipmentLogScreen__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ApplicationLogScreen_ApplicationLogScreen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__EquipmentLogScreen_EquipmentLogScreen__ = __webpack_require__(203);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -189,16 +189,16 @@ LoginDoneScreen = __decorate([
 
 /***/ }),
 
-/***/ 196:
+/***/ 197:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApplicationLogScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NewJob_NewJob__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__CurrentJob_CurrentJob__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PreviousJob_PreviousJob__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NewJob_NewJob__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__CurrentJob_CurrentJob__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PreviousJob_PreviousJob__ = __webpack_require__(202);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -244,14 +244,15 @@ ApplicationLogScreen = __decorate([
 
 /***/ }),
 
-/***/ 197:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewJob; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Notes_Notes__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Notes_Notes__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_apiService__ = __webpack_require__(98);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -264,10 +265,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var NewJob = (function () {
-    function NewJob(navCtrl, navParams) {
+    function NewJob(navCtrl, navParams, apiService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.apiService = apiService;
+        this.Date = "";
+        this.Grower = "";
+        this.FarmName = "";
+        this.FieldName = "";
+        this.AppType = "";
+        this.EquipID = "";
+        this.Acres = "";
     }
     NewJob.prototype.onCreateNewJob = function () {
     };
@@ -282,23 +292,39 @@ var NewJob = (function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__Notes_Notes__["a" /* Notes */]);
     };
     NewJob.prototype.onSubmit = function () {
-        this.navCtrl.pop();
+        var _this = this;
+        var data = {
+            Date: this.Date,
+            Grower: this.Grower,
+            FarmName: this.FarmName,
+            FieldName: this.FieldName,
+            AppType: this.AppType,
+            EquipID: this.EquipID,
+            Acres: this.Acres
+        };
+        this.apiService.post('/job/create', data, 'Creating Job...').subscribe(function (data) {
+            console.log('DATA', data);
+            _this.navCtrl.pop();
+        }, function (error) {
+            console.log(error);
+        });
     };
     return NewJob;
 }());
 NewJob = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-newjob',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/NewJob.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <ion-scroll class="scroll-wrapper" scrollY="true">\n\n    <div class="weight-fixed">\n      <ion-label>Date</ion-label>\n      <ion-input class="username-input"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Grower</ion-label>\n      <ion-input class="username-input"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Farm Name</ion-label>\n      <ion-input class="username-input"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Field Name</ion-label>\n      <ion-input class="username-input"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Application Type</ion-label>\n      <ion-input class="username-input"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Equipment ID</ion-label>\n      <ion-input class="username-input"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Applied Acres</ion-label>\n      <ion-input class="username-input"></ion-input>\n    </div>\n\n    <div class="weight-wrapper">\n      <button ion-button class="login-btn" (click)="onNotes();">Notes</button>\n    </div>\n\n    <div class="weight-wrapper">\n      <button ion-button class="submit-btn" (click)="onSubmit();">\n        Submit to current jobs Report\n      </button>\n    </div>\n\n  </ion-scroll>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/NewJob.html"*/
+        selector: 'page-newjob',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/NewJob.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <ion-scroll class="scroll-wrapper" scrollY="true">\n\n    <div class="weight-fixed">\n      <ion-label>Date</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Date"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Grower</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Grower"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Farm Name</ion-label>\n      <ion-input class="username-input" [(ngModel)]="FarmName"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Field Name</ion-label>\n      <ion-input class="username-input" [(ngModel)]="FieldName"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Application Type</ion-label>\n      <ion-input class="username-input" [(ngModel)]="AppType"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Equipment ID</ion-label>\n      <ion-input class="username-input" [(ngModel)]="EquipID"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Applied Acres</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Acres"></ion-input>\n    </div>\n\n    <div class="weight-wrapper">\n      <button ion-button class="login-btn" (click)="onNotes();">Notes</button>\n    </div>\n\n    <div class="weight-wrapper">\n      <button ion-button class="submit-btn" (click)="onSubmit();">\n        Submit to current jobs Report\n      </button>\n    </div>\n\n  </ion-scroll>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/NewJob.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_3__services_apiService__["a" /* ApiService */]])
 ], NewJob);
 
 //# sourceMappingURL=NewJob.js.map
 
 /***/ }),
 
-/***/ 198:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -341,7 +367,50 @@ Notes = __decorate([
 
 /***/ }),
 
-/***/ 199:
+/***/ 200:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Spinner; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var Spinner = (function () {
+    function Spinner(loadingCtrl) {
+        this.loadingCtrl = loadingCtrl;
+    }
+    Spinner.prototype.show = function (content) {
+        this.loading = this.loadingCtrl.create({
+            content: content,
+            dismissOnPageChange: true
+        });
+        this.loading.present();
+    };
+    Spinner.prototype.hide = function () {
+        this.loading.dismiss();
+    };
+    return Spinner;
+}());
+Spinner = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */]])
+], Spinner);
+
+//# sourceMappingURL=spinnerService.js.map
+
+/***/ }),
+
+/***/ 201:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -387,7 +456,7 @@ CurrentJob = __decorate([
 
 /***/ }),
 
-/***/ 200:
+/***/ 202:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -433,14 +502,14 @@ PreviousJob = __decorate([
 
 /***/ }),
 
-/***/ 201:
+/***/ 203:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EquipmentLogScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__EquipmentSelectedScreen_EquipmentSelectedScreen__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__EquipmentSelectedScreen_EquipmentSelectedScreen__ = __webpack_require__(204);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -478,17 +547,17 @@ EquipmentLogScreen = __decorate([
 
 /***/ }),
 
-/***/ 202:
+/***/ 204:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EquipmentSelectedScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LogHours_LogHours__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__RoutineMaintenance_RoutineMaintenance__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ScheduledMaintenance_ScheduledMaintenance__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Repairs_Repairs__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LogHours_LogHours__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__RoutineMaintenance_RoutineMaintenance__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ScheduledMaintenance_ScheduledMaintenance__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Repairs_Repairs__ = __webpack_require__(212);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -538,7 +607,7 @@ EquipmentSelectedScreen = __decorate([
 
 /***/ }),
 
-/***/ 203:
+/***/ 205:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -581,16 +650,16 @@ LogHours = __decorate([
 
 /***/ }),
 
-/***/ 204:
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RoutineMaintenance; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__MachineWash_MachineWash__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Grease_Grease__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__OtherRoutine_OtherRoutine__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__MachineWash_MachineWash__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Grease_Grease__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__OtherRoutine_OtherRoutine__ = __webpack_require__(209);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -636,7 +705,7 @@ RoutineMaintenance = __decorate([
 
 /***/ }),
 
-/***/ 205:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -678,7 +747,7 @@ MachineWash = __decorate([
 
 /***/ }),
 
-/***/ 206:
+/***/ 208:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -723,7 +792,7 @@ Grease = __decorate([
 
 /***/ }),
 
-/***/ 207:
+/***/ 209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -765,14 +834,14 @@ OtherRoutine = __decorate([
 
 /***/ }),
 
-/***/ 208:
+/***/ 210:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScheduledMaintenance; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NewSchedule_NewSchedule__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NewSchedule_NewSchedule__ = __webpack_require__(211);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -810,7 +879,7 @@ ScheduledMaintenance = __decorate([
 
 /***/ }),
 
-/***/ 209:
+/***/ 211:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -853,7 +922,7 @@ NewSchedule = __decorate([
 
 /***/ }),
 
-/***/ 210:
+/***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -896,187 +965,6 @@ Repairs = __decorate([
 
 /***/ }),
 
-/***/ 211:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApiService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(282);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__spinnerService__ = __webpack_require__(212);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-var API_BASEURL = 'http://dan.wolodeploy.com/public';
-var ApiService = (function () {
-    function ApiService(http, spinner) {
-        this.http = http;
-        this.spinner = spinner;
-    }
-    ApiService.prototype.get = function (url, data, loadingText) {
-        var _this = this;
-        url = API_BASEURL + url;
-        var params = this.ObjectToURLEncoded(data);
-        if (params !== '')
-            url += ('?' + params);
-        var header_json = {
-            'Content-Type': 'application/json'
-        };
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */](header_json);
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({
-            headers: headers
-        });
-        this.spinner.show(loadingText);
-        return this.http.get(url, options)
-            .map(function (res) {
-            return _this.extractData(res);
-        })
-            .catch(function (error) {
-            return _this.handleError(error);
-        });
-    };
-    ApiService.prototype.post = function (url, data, loadingText) {
-        var _this = this;
-        url = API_BASEURL + url;
-        var header_json = {};
-        header_json['Content-Type'] = 'application/json';
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */](header_json);
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({
-            headers: headers
-        });
-        this.spinner.show(loadingText);
-        return this.http.post(url, data, options)
-            .map(function (res) {
-            return _this.extractData(res);
-        })
-            .catch(function (error) {
-            return _this.handleError(error);
-        });
-    };
-    ApiService.prototype.put = function (url, data, loadingText) {
-        var _this = this;
-        url = API_BASEURL + url;
-        var header_json = {};
-        header_json['Content-Type'] = 'application/json';
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */](header_json);
-        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({
-            headers: headers
-        });
-        this.spinner.show(loadingText);
-        return this.http.put(url, data, options)
-            .map(function (res) {
-            return _this.extractData(res);
-        })
-            .catch(function (error) {
-            return _this.handleError(error);
-        });
-    };
-    ApiService.prototype.loadLocalJSON = function (path) {
-        var _this = this;
-        return this.http.get(path)
-            .map(function (res) {
-            return _this.extractData(res);
-        })
-            .catch(function (error) {
-            return _this.handleError(error);
-        });
-    };
-    ApiService.prototype.ObjectToURLEncoded = function (json_data) {
-        var encoded_data = "";
-        for (var p in json_data) {
-            encoded_data = encoded_data + p + "=" + encodeURIComponent(json_data[p]) + "&";
-        }
-        if (encoded_data === "")
-            return "";
-        else
-            return encoded_data.substr(0, encoded_data.length - 1);
-    };
-    ApiService.prototype.extractData = function (res) {
-        this.spinner.hide();
-        return res.json();
-    };
-    ApiService.prototype.handleError = function (error) {
-        this.spinner.hide();
-        // In a real world app, we might use a remote logging infrastructure
-        // We'd also dig deeper into the error to get a better message
-        var errMsg = (error.message) ? error.message : (error.status ? (error.status + ' - ' + error.statusText) : 'Server error');
-        console.error(errMsg); // log to console instead
-        error.body = JSON.parse(error._body);
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(error);
-    };
-    return ApiService;
-}());
-ApiService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */],
-        __WEBPACK_IMPORTED_MODULE_5__spinnerService__["a" /* Spinner */]])
-], ApiService);
-
-//# sourceMappingURL=apiService.js.map
-
-/***/ }),
-
-/***/ 212:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Spinner; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var Spinner = (function () {
-    function Spinner(loadingCtrl) {
-        this.loadingCtrl = loadingCtrl;
-    }
-    Spinner.prototype.show = function (content) {
-        this.loading = this.loadingCtrl.create({
-            content: content,
-            dismissOnPageChange: true
-        });
-        this.loading.present();
-    };
-    Spinner.prototype.hide = function () {
-        this.loading.dismiss();
-    };
-    return Spinner;
-}());
-Spinner = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */]])
-], Spinner);
-
-//# sourceMappingURL=spinnerService.js.map
-
-/***/ }),
-
 /***/ 213:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1099,30 +987,30 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_IntroScreen_IntroScreen__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_LoginScreen_LoginScreen__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_LoginDoneScreen_LoginDoneScreen__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_ApplicationLogScreen_ApplicationLogScreen__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_EquipmentLogScreen_EquipmentLogScreen__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_EquipmentLogScreen_EquipmentSelectedScreen_EquipmentSelectedScreen__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_EquipmentLogScreen_EquipmentSelectedScreen_LogHours_LogHours__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_RoutineMaintenance__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_ApplicationLogScreen_NewJob_NewJob__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_ApplicationLogScreen_CurrentJob_CurrentJob__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_ApplicationLogScreen_PreviousJob_PreviousJob__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_EquipmentLogScreen_EquipmentSelectedScreen_ScheduledMaintenance_ScheduledMaintenance__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_EquipmentLogScreen_EquipmentSelectedScreen_ScheduledMaintenance_NewSchedule_NewSchedule__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_EquipmentLogScreen_EquipmentSelectedScreen_Repairs_Repairs__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_ApplicationLogScreen_NewJob_Notes_Notes__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_MachineWash_MachineWash__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_Grease_Grease__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_OtherRoutine_OtherRoutine__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_apiService__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_spinnerService__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_IntroScreen_IntroScreen__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_LoginScreen_LoginScreen__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_LoginDoneScreen_LoginDoneScreen__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_ApplicationLogScreen_ApplicationLogScreen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_EquipmentLogScreen_EquipmentLogScreen__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_EquipmentLogScreen_EquipmentSelectedScreen_EquipmentSelectedScreen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_EquipmentLogScreen_EquipmentSelectedScreen_LogHours_LogHours__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_RoutineMaintenance__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_ApplicationLogScreen_NewJob_NewJob__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_ApplicationLogScreen_CurrentJob_CurrentJob__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_ApplicationLogScreen_PreviousJob_PreviousJob__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_EquipmentLogScreen_EquipmentSelectedScreen_ScheduledMaintenance_ScheduledMaintenance__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_EquipmentLogScreen_EquipmentSelectedScreen_ScheduledMaintenance_NewSchedule_NewSchedule__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_EquipmentLogScreen_EquipmentSelectedScreen_Repairs_Repairs__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_ApplicationLogScreen_NewJob_Notes_Notes__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_MachineWash_MachineWash__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_Grease_Grease__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_OtherRoutine_OtherRoutine__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_apiService__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_spinnerService__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1232,9 +1120,9 @@ AppModule = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_IntroScreen_IntroScreen__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_IntroScreen_IntroScreen__ = __webpack_require__(194);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1272,6 +1160,145 @@ MyApp = __decorate([
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 98:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApiService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__spinnerService__ = __webpack_require__(200);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+// const API_BASEURL = 'http://dan.wolodeploy.com/public';
+var API_BASEURL = 'http://172.20.11.60/Brooks/public';
+var ApiService = (function () {
+    function ApiService(http, spinner) {
+        this.http = http;
+        this.spinner = spinner;
+    }
+    ApiService.prototype.get = function (url, data, loadingText) {
+        var _this = this;
+        url = API_BASEURL + url;
+        var params = this.ObjectToURLEncoded(data);
+        if (params !== '')
+            url += ('?' + params);
+        var header_json = {
+            'Content-Type': 'application/json'
+        };
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */](header_json);
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({
+            headers: headers
+        });
+        this.spinner.show(loadingText);
+        return this.http.get(url, options)
+            .map(function (res) {
+            return _this.extractData(res);
+        })
+            .catch(function (error) {
+            return _this.handleError(error);
+        });
+    };
+    ApiService.prototype.post = function (url, data, loadingText) {
+        var _this = this;
+        url = API_BASEURL + url;
+        var header_json = {};
+        header_json['Content-Type'] = 'application/json';
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */](header_json);
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({
+            headers: headers
+        });
+        this.spinner.show(loadingText);
+        return this.http.post(url, data, options)
+            .map(function (res) {
+            return _this.extractData(res);
+        })
+            .catch(function (error) {
+            return _this.handleError(error);
+        });
+    };
+    ApiService.prototype.put = function (url, data, loadingText) {
+        var _this = this;
+        url = API_BASEURL + url;
+        var header_json = {};
+        header_json['Content-Type'] = 'application/json';
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */](header_json);
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({
+            headers: headers
+        });
+        this.spinner.show(loadingText);
+        return this.http.put(url, data, options)
+            .map(function (res) {
+            return _this.extractData(res);
+        })
+            .catch(function (error) {
+            return _this.handleError(error);
+        });
+    };
+    ApiService.prototype.loadLocalJSON = function (path) {
+        var _this = this;
+        return this.http.get(path)
+            .map(function (res) {
+            return _this.extractData(res);
+        })
+            .catch(function (error) {
+            return _this.handleError(error);
+        });
+    };
+    ApiService.prototype.ObjectToURLEncoded = function (json_data) {
+        var encoded_data = "";
+        for (var p in json_data) {
+            encoded_data = encoded_data + p + "=" + encodeURIComponent(json_data[p]) + "&";
+        }
+        if (encoded_data === "")
+            return "";
+        else
+            return encoded_data.substr(0, encoded_data.length - 1);
+    };
+    ApiService.prototype.extractData = function (res) {
+        this.spinner.hide();
+        return res.json();
+    };
+    ApiService.prototype.handleError = function (error) {
+        this.spinner.hide();
+        // In a real world app, we might use a remote logging infrastructure
+        // We'd also dig deeper into the error to get a better message
+        var errMsg = (error.message) ? error.message : (error.status ? (error.status + ' - ' + error.statusText) : 'Server error');
+        console.error(errMsg); // log to console instead
+        error.body = JSON.parse(error._body);
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(error);
+    };
+    return ApiService;
+}());
+ApiService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */],
+        __WEBPACK_IMPORTED_MODULE_5__spinnerService__["a" /* Spinner */]])
+], ApiService);
+
+//# sourceMappingURL=apiService.js.map
 
 /***/ })
 

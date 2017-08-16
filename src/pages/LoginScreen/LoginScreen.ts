@@ -25,7 +25,7 @@ export class LoginScreen {
       username: this.username,
       password: this.password
     };
-    this.apiService.post('/Api/APP', data, 'Logging in...').subscribe(
+    this.apiService.post('/login', data, 'Logging in...').subscribe(
       data => {
         console.log('DATA', data);
         this.navCtrl.push(LoginDoneScreen);
