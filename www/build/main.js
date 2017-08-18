@@ -106,18 +106,23 @@ var LoginScreen = (function () {
         this.username = "";
         this.password = "";
     }
+    // onLogin() {
+    //   let data = {
+    //     username: this.username,
+    //     password: this.password
+    //   };
+    //   this.apiService.post('/login', data, 'Logging in...').subscribe(
+    //     data => {
+    //       console.log('DATA', data);
+    //       this.navCtrl.push(LoginDoneScreen);
+    //     },
+    //     error => {
+    //       console.log(error);
+    //     }
+    //   );
+    // }
     LoginScreen.prototype.onLogin = function () {
-        var _this = this;
-        var data = {
-            username: this.username,
-            password: this.password
-        };
-        this.apiService.post('/login', data, 'Logging in...').subscribe(function (data) {
-            console.log('DATA', data);
-            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__["a" /* LoginDoneScreen */]);
-        }, function (error) {
-            console.log(error);
-        });
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__["a" /* LoginDoneScreen */]);
     };
     LoginScreen.prototype.onBack = function () {
         this.navCtrl.pop();
@@ -128,11 +133,10 @@ LoginScreen = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-loginscreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginScreen/LoginScreen.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical"></div>\n\n  <div class="weight-fixed">\n    <ion-label>Username</ion-label>\n    <ion-input class="username-input" [(ngModel)]="username"></ion-input>\n  </div>\n\n  <div class="weight-fixed">\n    <ion-label>Password</ion-label>\n    <ion-input class="username-input" type="password" [(ngModel)]="password"></ion-input>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onLogin();">Login</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginScreen/LoginScreen.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_3__services_apiService__["a" /* ApiService */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_apiService__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_apiService__["a" /* ApiService */]) === "function" && _c || Object])
 ], LoginScreen);
 
+var _a, _b, _c;
 //# sourceMappingURL=LoginScreen.js.map
 
 /***/ }),
@@ -146,6 +150,7 @@ LoginScreen = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ApplicationLogScreen_ApplicationLogScreen__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__EquipmentLogScreen_EquipmentLogScreen__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_apiService__ = __webpack_require__(98);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -159,10 +164,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var LoginDoneScreen = (function () {
-    function LoginDoneScreen(navCtrl, navParams) {
+    function LoginDoneScreen(navCtrl, navParams, apiService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.apiService = apiService;
     }
     LoginDoneScreen.prototype.onApplicationLog = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__ApplicationLogScreen_ApplicationLogScreen__["a" /* ApplicationLogScreen */]);
@@ -171,6 +178,14 @@ var LoginDoneScreen = (function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__EquipmentLogScreen_EquipmentLogScreen__["a" /* EquipmentLogScreen */]);
     };
     LoginDoneScreen.prototype.onReminder = function () {
+        var data = {
+            data: "test"
+        };
+        this.apiService.post('/task/reminder', data, 'Loading...').subscribe(function (data) {
+            console.log('DATA', data);
+        }, function (error) {
+            console.log(error);
+        });
     };
     LoginDoneScreen.prototype.onBack = function () {
         this.navCtrl.pop();
@@ -181,10 +196,10 @@ LoginDoneScreen = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-logindonescreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginDoneScreen/LoginDoneScreen.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical"></div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onApplicationLog();">Application Log</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onEquipmentLog();">Equipment Log</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onReminder();">Tasks/Reminders</button>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginDoneScreen/LoginDoneScreen.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_apiService__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_apiService__["a" /* ApiService */]) === "function" && _c || Object])
 ], LoginDoneScreen);
 
+var _a, _b, _c;
 //# sourceMappingURL=LoginDoneScreen.js.map
 
 /***/ }),
@@ -614,6 +629,7 @@ EquipmentSelectedScreen = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogHours; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_apiService__ = __webpack_require__(98);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -625,16 +641,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var LogHours = (function () {
-    function LogHours(navCtrl, navParams) {
+    function LogHours(navCtrl, navParams, apiService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.apiService = apiService;
     }
     LogHours.prototype.onBack = function () {
         this.navCtrl.pop();
     };
     LogHours.prototype.onSubmit = function () {
-        this.navCtrl.pop();
+        var _this = this;
+        var data = {
+            data: "test"
+        };
+        this.apiService.post('/equip/log', data, 'Logging...').subscribe(function (data) {
+            console.log('DATA', data);
+            _this.navCtrl.pop();
+        }, function (error) {
+            console.log(error);
+        });
     };
     return LogHours;
 }());
@@ -642,10 +669,10 @@ LogHours = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-loghours',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/LogHours/LogHours.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-fixed">\n    <ion-label>Date</ion-label>\n    <ion-input class="username-input"></ion-input>\n  </div>\n\n  <div class="weight-fixed">\n    <ion-label>Enter Current Hours</ion-label>\n    <ion-input class="username-input"></ion-input>\n  </div>\n\n  <div class="weight-wrapper">\n    <ion-label>List of previously submitted hours</ion-label>\n  </div>\n\n  <button ion-button class="global-submit-button" (click)="onSubmit();">\n    Submit\n  </button>\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/LogHours/LogHours.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_apiService__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_apiService__["a" /* ApiService */]) === "function" && _c || Object])
 ], LogHours);
 
+var _a, _b, _c;
 //# sourceMappingURL=LogHours.js.map
 
 /***/ }),
@@ -1294,10 +1321,10 @@ var ApiService = (function () {
 }());
 ApiService = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */],
-        __WEBPACK_IMPORTED_MODULE_5__spinnerService__["a" /* Spinner */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__spinnerService__["a" /* Spinner */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__spinnerService__["a" /* Spinner */]) === "function" && _b || Object])
 ], ApiService);
 
+var _a, _b;
 //# sourceMappingURL=apiService.js.map
 
 /***/ })

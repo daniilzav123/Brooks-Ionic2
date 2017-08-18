@@ -20,21 +20,23 @@ export class LoginScreen {
     this.password = "";
   }
 
+  // onLogin() {
+  //   let data = {
+  //     username: this.username,
+  //     password: this.password
+  //   };
+  //   this.apiService.post('/login', data, 'Logging in...').subscribe(
+  //     data => {
+  //       console.log('DATA', data);
+  //       this.navCtrl.push(LoginDoneScreen);
+  //     },
+  //     error => {
+  //       console.log(error);
+  //     }
+  //   );
+  // }
   onLogin() {
-    let data = {
-      username: this.username,
-      password: this.password
-    };
-    this.apiService.post('/login', data, 'Logging in...').subscribe(
-      data => {
-        console.log('DATA', data);
-        this.navCtrl.push(LoginDoneScreen);
-      },
-      error => {
-        console.log(error);
-      }
-    );
-
+    this.navCtrl.push(LoginDoneScreen);
   }
 
   onBack() {
