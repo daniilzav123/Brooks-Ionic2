@@ -106,24 +106,22 @@ var LoginScreen = (function () {
         this.username = "";
         this.password = "";
     }
-    // onLogin() {
-    //   let data = {
-    //     username: this.username,
-    //     password: this.password
-    //   };
-    //   this.apiService.post('/login', data, 'Logging in...').subscribe(
-    //     data => {
-    //       console.log('DATA', data);
-    //       this.navCtrl.push(LoginDoneScreen);
-    //     },
-    //     error => {
-    //       console.log(error);
-    //     }
-    //   );
-    // }
     LoginScreen.prototype.onLogin = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__["a" /* LoginDoneScreen */]);
+        var _this = this;
+        var data = {
+            username: this.username,
+            password: this.password
+        };
+        this.apiService.post('/login', data, 'Logging in...').subscribe(function (data) {
+            console.log('DATA', data);
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__["a" /* LoginDoneScreen */]);
+        }, function (error) {
+            console.log(error);
+        });
     };
+    // onLogin() {
+    //   this.navCtrl.push(LoginDoneScreen);
+    // }
     LoginScreen.prototype.onBack = function () {
         this.navCtrl.pop();
     };
