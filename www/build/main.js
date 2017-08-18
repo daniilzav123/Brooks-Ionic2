@@ -1217,8 +1217,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-// const API_BASEURL = 'http://dan.wolodeploy.com/public';
-var API_BASEURL = 'http://172.20.11.60/Brooks/public';
+var API_BASEURL = 'http://dan.wolodeploy.com/public';
+// const API_BASEURL = 'http://172.20.11.60/Brooks/public';
 var ApiService = (function () {
     function ApiService(http, spinner) {
         this.http = http;
