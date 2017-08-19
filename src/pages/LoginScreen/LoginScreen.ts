@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams} from 'ionic-angular';
 import {LoginDoneScreen} from "../LoginDoneScreen/LoginDoneScreen";
 import {ApiService} from "../../services/apiService"
+import {NativeStorage} from "ionic-native";
 
 @Component({
   selector: 'page-loginscreen',
@@ -28,7 +29,15 @@ export class LoginScreen {
     this.apiService.post('/login', data, 'Logging in...').subscribe(
       data => {
         console.log('DATA', data);
-        this.navCtrl.push(LoginDoneScreen);
+        NativeStorage.setItem('loggedIn', true)
+          .then((d) => {
+            console.log('wa true' + d);
+            this.navCtrl.push(LoginDoneScreen);
+          },
+          error => {
+            console.error('Error storing LoginData', error);
+          }
+        );
       },
       error => {
         console.log(error);

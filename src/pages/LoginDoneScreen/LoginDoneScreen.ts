@@ -3,6 +3,7 @@ import { NavController, NavParams} from 'ionic-angular';
 import {ApplicationLogScreen} from "../ApplicationLogScreen/ApplicationLogScreen";
 import {EquipmentLogScreen} from "../EquipmentLogScreen/EquipmentLogScreen";
 import {ApiService} from "../../services/apiService";
+import {NativeStorage} from "ionic-native";
 
 @Component({
   selector: 'page-logindonescreen',
@@ -45,4 +46,11 @@ export class LoginDoneScreen {
     this.navCtrl.pop();
   }
 
+  onLogout() {
+    NativeStorage.setItem('loggedIn', false)
+      .then((d) => {
+        console.log('wa true' + d);
+        this.navCtrl.pop();
+      }, error => console.error('Error storing LoginData', error));
+  }
 }

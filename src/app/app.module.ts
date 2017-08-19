@@ -27,10 +27,12 @@ import {OtherRoutine} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/
 
 import {ApiService} from '../services/apiService';
 import {Spinner} from '../services/spinnerService';
+import {AppSplashScreen} from "../pages/AppSplashScreen/AppSplashScreen";
 
 @NgModule({
   declarations: [
     MyApp,
+    AppSplashScreen,
     IntroScreen,
     LoginScreen,
     LoginDoneScreen,
@@ -58,6 +60,7 @@ import {Spinner} from '../services/spinnerService';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    AppSplashScreen,
     IntroScreen,
     LoginScreen,
     LoginDoneScreen,
