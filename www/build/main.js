@@ -701,7 +701,7 @@ var EquipmentLogScreen = (function () {
     };
     EquipmentLogScreen.prototype.onJob = function (index) {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__EquipmentSelectedScreen_EquipmentSelectedScreen__["a" /* EquipmentSelectedScreen */], {
-            index: index
+            index: this.job_list[index].id
         });
     };
     EquipmentLogScreen.prototype.ngOnInit = function () {
@@ -819,58 +819,27 @@ var LogHours = (function () {
         this.apiService = apiService;
         this.job_list = [];
         this.index = this.navParams.get("index");
+        this.myHour = 0;
     }
     LogHours.prototype.onBack = function () {
         this.navCtrl.pop();
     };
     LogHours.prototype.ngOnInit = function () {
-        this.job_list = [
-            {
-                date: "1",
-                hour: "1"
-            },
-            {
-                date: "2",
-                hour: "2"
-            },
-            {
-                date: "3",
-                hour: "3"
-            },
-            {
-                date: "4",
-                hour: "4"
-            },
-            {
-                date: "5",
-                hour: "5"
-            },
-            {
-                date: "1",
-                hour: "1"
-            },
-            {
-                date: "2",
-                hour: "2"
-            },
-            {
-                date: "3",
-                hour: "3"
-            },
-            {
-                date: "4",
-                hour: "4"
-            },
-            {
-                date: "5",
-                hour: "5"
-            },
-        ];
+        var _this = this;
+        var data = {};
+        this.apiService.post('/equip/search', data, 'Logging...').subscribe(function (data) {
+            console.log('DATA', data);
+            _this.job_list = data.response;
+        }, function (error) {
+            console.log(error);
+        });
     };
     LogHours.prototype.onSubmit = function () {
         var _this = this;
         var data = {
-            data: "test"
+            id: this.index,
+            date: this.myDate,
+            hour: this.myHour
         };
         this.apiService.post('/equip/log', data, 'Logging...').subscribe(function (data) {
             console.log('DATA', data);
@@ -879,13 +848,11 @@ var LogHours = (function () {
             console.log(error);
         });
     };
-    LogHours.prototype.onUpdateToggle = function () {
-    };
     return LogHours;
 }());
 LogHours = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-loghours',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/LogHours/LogHours.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-fixed">\n    <ion-item>\n      <ion-label>Date</ion-label>\n      <ion-datetime class="date-picker" [(ngModel)]="myDate"></ion-datetime>\n    </ion-item>\n    <ion-item>\n      <ion-label>Enter Current Hours</ion-label>\n      <ion-input class="username-input"></ion-input>\n    </ion-item>\n  </div>\n\n  <div class="weight-wrapper">\n    <ion-label>List of previously submitted hours</ion-label>\n    <ion-scroll>\n      <ion-item *ngFor="let item of job_list; let idIdx = index;">\n        <ion-label class="center-label">{{item.date}}</ion-label>\n        <ion-label class="center-label">{{item.hour}}</ion-label>\n      </ion-item>\n    </ion-scroll>\n  </div>\n\n  <button ion-button class="global-submit-button" (click)="onSubmit();">\n    Submit\n  </button>\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/LogHours/LogHours.html"*/
+        selector: 'page-loghours',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/LogHours/LogHours.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-fixed">\n    <ion-item>\n      <ion-label>Date</ion-label>\n      <ion-datetime class="date-picker" [(ngModel)]="myDate"></ion-datetime>\n    </ion-item>\n    <ion-item>\n      <ion-label>Enter Current Hours</ion-label>\n      <ion-input class="username-input" [(ngModel)]="myHour"></ion-input>\n    </ion-item>\n  </div>\n\n  <div class="weight-wrapper">\n    <ion-label>List of previously submitted hours</ion-label>\n  </div>\n\n  <ion-scroll class="scroll-wrapper" scrollY="true">\n    <div class="weight-fixed" *ngFor="let item of job_list; let idIdx = index;">\n      <ion-item>\n        <ion-label>{{item.Date}}</ion-label>\n        <ion-label>{{item.Hour}}</ion-label>\n      </ion-item>\n    </div>\n  </ion-scroll>\n\n\n  <button ion-button class="global-submit-button" (click)="onSubmit();">\n    Submit\n  </button>\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/LogHours/LogHours.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],

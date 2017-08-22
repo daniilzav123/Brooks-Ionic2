@@ -23,7 +23,7 @@ export class EquipmentLogScreen {
 
   onJob(index: any) {
     this.navCtrl.push(EquipmentSelectedScreen, {
-      index: index
+      index: this.job_list[index].id
     });
   }
 

@@ -8,6 +8,7 @@ import {ApiService} from "../../../../services/apiService"
 })
 export class LogHours {
   public myDate: any;
+  public myHour: number;
   public index: number;
   public job_list = [];
   constructor(
@@ -16,6 +17,7 @@ export class LogHours {
     public apiService: ApiService
   ) {
     this.index = this.navParams.get("index");
+    this.myHour = 0;
   }
 
   onBack() {
@@ -23,53 +25,29 @@ export class LogHours {
   }
 
   ngOnInit() {
-    this.job_list = [
-      {
-        date: "1",
-        hour: "1"
+    let data = {
+    };
+    this.apiService.post('/equip/search', data, 'Logging...').subscribe(
+      data => {
+        console.log('DATA', data);
+        // this.job_list = data.response;
+        for (let i = 0; i < data.response.length; i++) {
+          if (data.response[i].jobID == this.index) {
+            this.job_list.push(data.response[i]);
+          }
+        }
       },
-      {
-        date: "2",
-        hour: "2"
-      },
-      {
-        date: "3",
-        hour: "3"
-      },
-      {
-        date: "4",
-        hour: "4"
-      },
-      {
-        date: "5",
-        hour: "5"
-      },
-      {
-        date: "1",
-        hour: "1"
-      },
-      {
-        date: "2",
-        hour: "2"
-      },
-      {
-        date: "3",
-        hour: "3"
-      },
-      {
-        date: "4",
-        hour: "4"
-      },
-      {
-        date: "5",
-        hour: "5"
-      },
-    ]
+      error => {
+        console.log(error);
+      }
+    );
   }
 
   onSubmit() {
     let data = {
-      data: "test"
+      id: this.index,
+      date: this.myDate,
+      hour: this.myHour
     };
     this.apiService.post('/equip/log', data, 'Logging...').subscribe(
       data => {
@@ -80,9 +58,5 @@ export class LogHours {
         console.log(error);
       }
     );
-  }
-
-  onUpdateToggle() {
-
   }
 }

@@ -11,19 +11,23 @@
     </ion-item>
     <ion-item>
       <ion-label>Enter Current Hours</ion-label>
-      <ion-input class="username-input"></ion-input>
+      <ion-input class="username-input" [(ngModel)]="myHour"></ion-input>
     </ion-item>
   </div>
 
   <div class="weight-wrapper">
     <ion-label>List of previously submitted hours</ion-label>
-    <ion-scroll>
-      <ion-item *ngFor="let item of job_list; let idIdx = index;">
-        <ion-label class="center-label">{{item.date}}</ion-label>
-        <ion-label class="center-label">{{item.hour}}</ion-label>
-      </ion-item>
-    </ion-scroll>
   </div>
+
+  <ion-scroll class="scroll-wrapper" scrollY="true">
+    <div class="weight-fixed" *ngFor="let item of job_list; let idIdx = index;">
+      <ion-item>
+        <ion-label>{{item.Date}}</ion-label>
+        <ion-label>{{item.Hour}}</ion-label>
+      </ion-item>
+    </div>
+  </ion-scroll>
+
 
   <button ion-button class="global-submit-button" (click)="onSubmit();">
     Submit
