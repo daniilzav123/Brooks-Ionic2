@@ -4,8 +4,10 @@
 
   <div class="back-padding-vertical-mini"></div>
 
-  <div class="weight-wrapper">
-    <ion-label>Repairs needed</ion-label>
+  <div class="new-feedback-wrapper">
+    <textarea rows="7" type="text" placeholder="Describe notes"></textarea>
+    <div class="camera-image" (click)="onCamera();"></div>
+    <div *ngIf="photoAdded" class="camera-image" [ngStyle]="{'background-image': 'url(' + photoUrl + ')'}"></div>
   </div>
 
   <button ion-button class="global-submit-button" (click)="onSubmit();">
