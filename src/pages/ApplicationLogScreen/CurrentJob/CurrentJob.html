@@ -4,9 +4,15 @@
 
   <div class="back-padding-vertical-mini"></div>
 
-  <div class="weight-wrapper">
-    <ion-label>List of all entered jobs</ion-label>
+  <div class="weight-fixed">
+    <ion-label class="label">List of all entered jobs</ion-label>
   </div>
+
+  <ion-scroll class="scroll-wrapper" scrollY="true">
+    <div class="weight-fixed" *ngFor="let item of job_list; let idIdx = index;" (click)="onJob(idIdx)">
+      <ion-label class="username-input">{{item.id}}</ion-label>
+    </div>
+  </ion-scroll>
 
   <button ion-button class="global-submit-button">
     Submit Current Report

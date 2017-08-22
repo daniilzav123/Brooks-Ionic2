@@ -4,11 +4,13 @@
 
   <div class="back-padding-vertical-mini"></div>
 
-  <div class="new-feedback-wrapper">
-    <textarea rows="7" type="text" placeholder="Describe notes"></textarea>
+  <div class="weight-wrapper">
+    <textarea rows="5" type="text" placeholder="Describe notes" [(ngModel)]="note"></textarea>
     <div class="camera-image" (click)="onCamera();"></div>
-    <div *ngIf="photoAdded" class="camera-image" [ngStyle]="{'background-image': 'url(' + photoUrl + ')'}"></div>
+    <br/>
+    <div *ngIf="photoAdded" class="photoAdded" [ngStyle]="{'background-image': 'url(' + photoUrl + ')'}"></div>
   </div>
+
 
   <button ion-button class="global-submit-button" (click)="onSubmit();">
     Submit

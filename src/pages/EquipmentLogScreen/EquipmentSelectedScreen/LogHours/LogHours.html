@@ -5,17 +5,24 @@
   <div class="back-padding-vertical-mini"></div>
 
   <div class="weight-fixed">
-    <ion-label>Date</ion-label>
-    <ion-input class="username-input"></ion-input>
-  </div>
-
-  <div class="weight-fixed">
-    <ion-label>Enter Current Hours</ion-label>
-    <ion-input class="username-input"></ion-input>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime class="date-picker" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Enter Current Hours</ion-label>
+      <ion-input class="username-input"></ion-input>
+    </ion-item>
   </div>
 
   <div class="weight-wrapper">
     <ion-label>List of previously submitted hours</ion-label>
+    <ion-scroll>
+      <ion-item *ngFor="let item of job_list; let idIdx = index;">
+        <ion-label class="center-label">{{item.date}}</ion-label>
+        <ion-label class="center-label">{{item.hour}}</ion-label>
+      </ion-item>
+    </ion-scroll>
   </div>
 
   <button ion-button class="global-submit-button" (click)="onSubmit();">

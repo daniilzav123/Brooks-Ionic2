@@ -10,12 +10,20 @@ page-loghours {
       padding-right: 20px;
       margin-top: 20px;
 
+      .date-picker {
+        background-color: transparent;
+      }
+
       .username-input {
-        background-color: lightgray;
+        background-color: transparent;
       }
 
       .password-input {
         background-color: lightgray;
+      }
+
+      .center-label {
+        text-align: center;
       }
     }
 

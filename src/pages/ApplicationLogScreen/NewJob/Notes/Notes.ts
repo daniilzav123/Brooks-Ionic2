@@ -7,14 +7,15 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   templateUrl: 'Notes.html'
 })
 export class Notes {
-  public photoAdded = false;
-  public photoUrl = null;
+  note: string;
+  photoAdded = false;
+  photoUrl = null;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private camera: Camera
   ) {
-
+    this.note = "";
   }
 
   onBack() {
@@ -22,6 +23,7 @@ export class Notes {
   }
 
   onSubmit() {
+    this.navParams.get('parent').setNotes(this.note);
     this.navCtrl.pop();
   }
 

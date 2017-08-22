@@ -31,6 +31,7 @@ import {AppSplashScreen} from "../pages/AppSplashScreen/AppSplashScreen";
 
 import { Camera } from '@ionic-native/camera';
 import {NativeStorage} from "ionic-native";
+import {SingletonService} from "../services/singletoneService";
 
 @NgModule({
   declarations: [
@@ -90,6 +91,7 @@ import {NativeStorage} from "ionic-native";
     Spinner,
     Camera,
     NativeStorage,
+    SingletonService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

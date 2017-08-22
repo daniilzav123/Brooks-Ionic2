@@ -7,17 +7,64 @@ import {ApiService} from "../../../../services/apiService"
   templateUrl: 'LogHours.html'
 })
 export class LogHours {
-
+  public myDate: any;
+  public index: number;
+  public job_list = [];
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public apiService: ApiService
   ) {
-
+    this.index = this.navParams.get("index");
   }
 
   onBack() {
     this.navCtrl.pop();
+  }
+
+  ngOnInit() {
+    this.job_list = [
+      {
+        date: "1",
+        hour: "1"
+      },
+      {
+        date: "2",
+        hour: "2"
+      },
+      {
+        date: "3",
+        hour: "3"
+      },
+      {
+        date: "4",
+        hour: "4"
+      },
+      {
+        date: "5",
+        hour: "5"
+      },
+      {
+        date: "1",
+        hour: "1"
+      },
+      {
+        date: "2",
+        hour: "2"
+      },
+      {
+        date: "3",
+        hour: "3"
+      },
+      {
+        date: "4",
+        hour: "4"
+      },
+      {
+        date: "5",
+        hour: "5"
+      },
+    ]
   }
 
   onSubmit() {
@@ -33,5 +80,9 @@ export class LogHours {
         console.log(error);
       }
     );
+  }
+
+  onUpdateToggle() {
+
   }
 }

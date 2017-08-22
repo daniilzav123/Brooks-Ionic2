@@ -25284,6 +25284,29 @@ page-currentjob .scroll-content {
   background: none;
 }
 
+page-currentjob .scroll-content .scroll-wrapper {
+  width: 100%;
+  height: 70%;
+  padding-bottom: 10px;
+}
+
+page-currentjob .scroll-content .weight-fixed {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+}
+
+page-currentjob .scroll-content .weight-fixed .label {
+  text-align: center;
+}
+
+page-currentjob .scroll-content .weight-fixed .username-input {
+  background-color: lightgray;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 page-currentjob .scroll-content .weight-wrapper {
   width: 100%;
   text-align: center;
@@ -25293,6 +25316,7 @@ page-currentjob .scroll-content .weight-wrapper .login-btn {
   margin-top: 50px;
   width: 220px;
   height: 40px;
+  text-align: center;
   background-color: lightgray;
 }
 
@@ -25356,20 +25380,9 @@ page-notes .scroll-content {
 page-notes .scroll-content .weight-wrapper {
   width: 100%;
   text-align: center;
-  margin-top: 50px;
 }
 
-page-notes .scroll-content .new-feedback-wrapper {
-  position: relative;
-  padding: 15px;
-  padding-top: 40px;
-  background-color: white;
-  border-radius: 5px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-page-notes .scroll-content .new-feedback-wrapper textarea {
+page-notes .scroll-content .weight-wrapper textarea {
   width: 100%;
   background-color: wheat;
   border-radius: 5px;
@@ -25379,11 +25392,21 @@ page-notes .scroll-content .new-feedback-wrapper textarea {
   letter-spacing: 2px;
 }
 
-page-notes .scroll-content .camera-image {
+page-notes .scroll-content .weight-wrapper .camera-image {
   display: inline-block;
   background-image: url("../assets/images/camera.png");
   width: 60px;
   height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 30px;
+}
+
+page-notes .scroll-content .weight-wrapper .photoAdded {
+  display: inline-block;
+  background-image: url("../assets/images/camera.png");
+  width: 150px;
+  height: 150px;
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 30px;
@@ -25402,6 +25425,29 @@ page-previousjob .scroll-content .weight-wrapper {
 page-equipmentlogscreen .scroll-content {
   overflow-y: hidden;
   background: none;
+}
+
+page-equipmentlogscreen .scroll-content .scroll-wrapper {
+  width: 100%;
+  height: 85%;
+  padding-bottom: 10px;
+}
+
+page-equipmentlogscreen .scroll-content .weight-fixed {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+}
+
+page-equipmentlogscreen .scroll-content .weight-fixed .label {
+  text-align: center;
+}
+
+page-equipmentlogscreen .scroll-content .weight-fixed .username-input {
+  background-color: lightgray;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 page-equipmentlogscreen .scroll-content .weight-wrapper {
@@ -25437,12 +25483,20 @@ page-loghours .scroll-content .weight-fixed {
   margin-top: 20px;
 }
 
+page-loghours .scroll-content .weight-fixed .date-picker {
+  background-color: transparent;
+}
+
 page-loghours .scroll-content .weight-fixed .username-input {
-  background-color: lightgray;
+  background-color: transparent;
 }
 
 page-loghours .scroll-content .weight-fixed .password-input {
   background-color: lightgray;
+}
+
+page-loghours .scroll-content .weight-fixed .center-label {
+  text-align: center;
 }
 
 page-loghours .scroll-content .weight-wrapper {

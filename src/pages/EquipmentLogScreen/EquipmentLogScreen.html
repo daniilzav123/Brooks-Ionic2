@@ -8,8 +8,10 @@
     <ion-label>Select Equipment</ion-label>
   </div>
 
-  <button ion-button class="global-submit-button" (click)="onSelect();">
-    Select
-  </button>
+  <ion-scroll class="scroll-wrapper" scrollY="true">
+    <div class="weight-fixed" *ngFor="let item of job_list; let idIdx = index;" (click)="onJob(idIdx)">
+      <ion-label class="username-input">{{item.id}}</ion-label>
+    </div>
+  </ion-scroll>
 
 </ion-content>
