@@ -29,15 +29,17 @@ export class LoginScreen {
     this.apiService.post('/login', data, 'Logging in...').subscribe(
       data => {
         console.log('DATA', data);
-        NativeStorage.setItem('loggedIn', true)
-          .then((d) => {
-            console.log('wa true' + d);
-            this.navCtrl.push(LoginDoneScreen);
-          },
-          error => {
-            console.error('Error storing LoginData', error);
-          }
-        );
+        // must update
+        // NativeStorage.setItem('loggedIn', true)
+        //   .then((d) => {
+        //     console.log('wa true' + d);
+        //     this.navCtrl.push(LoginDoneScreen);
+        //   },
+        //   error => {
+        //     console.error('Error storing LoginData', error);
+        //   }
+        // );
+        this.navCtrl.push(LoginDoneScreen);
       },
       error => {
         console.log(error);

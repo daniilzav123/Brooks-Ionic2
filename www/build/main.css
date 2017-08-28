@@ -26313,9 +26313,36 @@ page-applicationlogscreen .scroll-content .weight-wrapper .login-btn {
   background-color: lightgray;
 }
 
+page-currentjob .scrollwrap {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
 page-currentjob .scroll-content {
   overflow-y: hidden;
   background: none;
+  white-space: nowrap;
+}
+
+page-currentjob .scroll-content .scroll-wrapper {
+  width: 100%;
+  height: 90%;
+  padding-bottom: 10px;
+}
+
+page-currentjob .scroll-content .weight-fixed {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 20px;
+}
+
+page-currentjob .scroll-content .weight-fixed .username-input {
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
+page-currentjob .scroll-content .weight-fixed .password-input {
+  background-color: lightgray;
 }
 
 page-currentjob .scroll-content .weight-wrapper {
@@ -26325,9 +26352,17 @@ page-currentjob .scroll-content .weight-wrapper {
 
 page-currentjob .scroll-content .weight-wrapper .login-btn {
   margin-top: 50px;
-  width: 220px;
+  width: 300px;
   height: 40px;
   background-color: lightgray;
+}
+
+page-currentjob .scroll-content .weight-wrapper .submit-btn {
+  margin-top: 20px;
+  width: 300px;
+  height: 40px;
+  background-color: lightgray;
+  color: #f53d3d;
 }
 
 page-newjob .scrollwrap {

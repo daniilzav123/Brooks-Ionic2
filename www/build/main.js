@@ -220,7 +220,6 @@ IntroScreen = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_apiService__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_native__ = __webpack_require__(126);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -230,7 +229,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -251,13 +249,17 @@ var LoginScreen = (function () {
         };
         this.apiService.post('/login', data, 'Logging in...').subscribe(function (data) {
             console.log('DATA', data);
-            __WEBPACK_IMPORTED_MODULE_4_ionic_native__["a" /* NativeStorage */].setItem('loggedIn', true)
-                .then(function (d) {
-                console.log('wa true' + d);
-                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__["a" /* LoginDoneScreen */]);
-            }, function (error) {
-                console.error('Error storing LoginData', error);
-            });
+            // must update
+            // NativeStorage.setItem('loggedIn', true)
+            //   .then((d) => {
+            //     console.log('wa true' + d);
+            //     this.navCtrl.push(LoginDoneScreen);
+            //   },
+            //   error => {
+            //     console.error('Error storing LoginData', error);
+            //   }
+            // );
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__["a" /* LoginDoneScreen */]);
         }, function (error) {
             console.log(error);
         });
@@ -274,11 +276,10 @@ LoginScreen = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-loginscreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginScreen/LoginScreen.html"*/'<ion-header>\n  <ion-navbar>\n\n    <ion-buttons (click)="goback();" style="position: absolute;color:white;">\n        \n    </ion-buttons>\n\n  \n\n    <ion-title style="text-align:center">\n      Login to your account\n    </ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n\n\n\n<ion-content padding1 class="set1 setunivbuttons" style="">\n\n\n\n\n\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  \n\n\n\n<div style="padding:20px;margin-top:calc(50vh - 162.5px);background:#f2f2f2;border-radius:4px;box-shadow:0px 0px 10px #424242;">\n  <div class="weight-fixeds">\n    \n    <ion-input placeholder="Username" style="margin-bottom:20px;" class="username-input" [(ngModel)]="username"></ion-input>\n  </div>\n\n  <div class="weight-fixeds">\n   \n    <ion-input placeholder="Password" class="username-input" type="password" [(ngModel)]="password"></ion-input>\n  </div>\n\n  <div class="weight-wrappers" style="margin-top:20px;">\n    <button ion-button class="login-btn" (click)="onLogin();">Login</button>\n  </div>\n</div>\n\n<div style="position:absolute;bottom:0px;left:0px;right:0px;width:100%;padding:20px 25px;background: rgba(0, 0, 0, 0.17);">\n  <button ion-button>Don\'t Have An Account?</button>\n</div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginScreen/LoginScreen.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_3__services_apiService__["a" /* ApiService */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_apiService__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_apiService__["a" /* ApiService */]) === "function" && _c || Object])
 ], LoginScreen);
 
+var _a, _b, _c;
 //# sourceMappingURL=LoginScreen.js.map
 
 /***/ }),
@@ -407,7 +408,7 @@ var NewJob = (function () {
 }());
 NewJob = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-newjob',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/NewJob.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-buttons (click)="goback();" style="position: absolute;color:white;">\n    </ion-buttons>\n    <ion-title style="text-align:center">\n      Create New Job\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content class="pageten1" style="">\n\n  <div class="mainjsets">\n<div style="padding:0px;">\n  <div class="setone4 juniques secondary">\n    <img src="http://i.imgur.com/OYt16qG.png">\n    <div class="topset1">Add Job</div>\n    <div class="topset2">Add a new task in your application log</div>\n  </div>\n</div>\n</div>\n\n\n\n\n\n\n\n<div class="titleunits1">\n  Please fill the following fields\n</div>\n\n<div style="padding:15px;">\n  <ion-input class="inputsten" type="text" placeholder="Date" [(ngModel)]="Date"></ion-input>\n  <ion-input class="inputsten" type="text" placeholder="Grower" [(ngModel)]="Grower"></ion-input>\n  <ion-input class="inputsten" type="text" placeholder="Farm Name" [(ngModel)]="FarmName"></ion-input>\n  <ion-input class="inputsten" type="text" placeholder="Field name" [(ngModel)]="FieldName"></ion-input>\n\n\n\n  <ion-list class="projdrops1">\n  <ion-item>\n    <ion-label style="color:#919394;">Application Type</ion-label>\n    <ion-select [(ngModel)]="AppType">\n      <ion-option value="nes">Flat Rate Fertilizer</ion-option>\n      <ion-option value="n64">Variable Rate Fertilizer</ion-option>\n      <ion-option value="ps">Flat Rate Lime</ion-option>\n      <ion-option value="genesis">Variable Rate Lime</ion-option>\n      <ion-option value="saturn">Other (please explain)</ion-option>\n    </ion-select>\n  </ion-item>\n</ion-list>\n\n\n\n  <ion-input class="inputsten" type="text" placeholder="Equipment ID" [(ngModel)]="EquipID"></ion-input>\n  <ion-input class="inputsten" type="text" placeholder="Applied Acres" [(ngModel)]="Acres"></ion-input>\n\n  <div class="buttonnotes" (click)="onNotes();"><img src="http://i.imgur.com/pYFWoEW.png">Add Notes</div>\n</div>\n\n<div class="sendwraps1">\n  <div class="buttonsub1s" (click)="onSubmit();">Submit New Job</div>\n</div>\n\n\n\n<div style="display:none;">\n    <div class="weight-fixed">\n      <ion-label>Date</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Date"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Grower</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Grower"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Farm Name</ion-label>\n      <ion-input class="username-input" [(ngModel)]="FarmName"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Field Name</ion-label>\n      <ion-input class="username-input" [(ngModel)]="FieldName"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Application Type</ion-label>\n      <ion-input class="username-input" [(ngModel)]="AppType"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Equipment ID</ion-label>\n      <ion-input class="username-input" [(ngModel)]="EquipID"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Applied Acres</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Acres"></ion-input>\n    </div>\n\n    <div class="weight-wrapper">\n      <button ion-button class="login-btn" (click)="onNotes();">Notes</button>\n    </div>\n\n    <div class="weight-wrapper">\n      <button ion-button class="submit-btn" (click)="onSubmit();">\n        Submit to current jobs Report\n      </button>\n    </div>\n</div>\n\n\n</ion-content>\n\n\n\n\n\n\n  '/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/NewJob.html"*/
+        selector: 'page-newjob',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/NewJob.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-buttons (click)="goback();" style="position: absolute;color:white;">\n    </ion-buttons>\n    <ion-title style="text-align:center">\n      Create New Job\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content class="pageten1" style="">\n\n  <div class="mainjsets">\n    <div style="padding:0px;">\n      <div class="setone4 juniques secondary">\n        <img src="http://i.imgur.com/OYt16qG.png">\n        <div class="topset1">Add Job</div>\n        <div class="topset2">Add a new task in your application log</div>\n      </div>\n    </div>\n  </div>\n\n\n\n\n\n\n\n  <div class="titleunits1">\n    Please fill the following fields\n  </div>\n\n  <div style="padding:15px;">\n    <ion-input class="inputsten" type="text" placeholder="Date" [(ngModel)]="Date"></ion-input>\n    <ion-input class="inputsten" type="text" placeholder="Grower" [(ngModel)]="Grower"></ion-input>\n    <ion-input class="inputsten" type="text" placeholder="Farm Name" [(ngModel)]="FarmName"></ion-input>\n    <ion-input class="inputsten" type="text" placeholder="Field name" [(ngModel)]="FieldName"></ion-input>\n\n\n\n    <ion-list class="projdrops1">\n      <ion-item>\n        <ion-label style="color:#919394;">Application Type</ion-label>\n        <ion-select [(ngModel)]="AppType">\n          <ion-option value="nes">Flat Rate Fertilizer</ion-option>\n          <ion-option value="n64">Variable Rate Fertilizer</ion-option>\n          <ion-option value="ps">Flat Rate Lime</ion-option>\n          <ion-option value="genesis">Variable Rate Lime</ion-option>\n          <ion-option value="saturn">Other (please explain)</ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-list>\n\n\n\n    <ion-input class="inputsten" type="text" placeholder="Equipment ID" [(ngModel)]="EquipID"></ion-input>\n    <ion-input class="inputsten" type="text" placeholder="Applied Acres" [(ngModel)]="Acres"></ion-input>\n\n    <div class="buttonnotes" (click)="onNotes();"><img src="http://i.imgur.com/pYFWoEW.png">Add Notes</div>\n  </div>\n\n  <div class="sendwraps1">\n    <div class="buttonsub1s" (click)="onSubmit();">Submit New Job</div>\n  </div>\n\n\n\n  <div style="display:none;">\n    <div class="weight-fixed">\n      <ion-label>Date</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Date"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Grower</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Grower"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Farm Name</ion-label>\n      <ion-input class="username-input" [(ngModel)]="FarmName"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Field Name</ion-label>\n      <ion-input class="username-input" [(ngModel)]="FieldName"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Application Type</ion-label>\n      <ion-input class="username-input" [(ngModel)]="AppType"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Equipment ID</ion-label>\n      <ion-input class="username-input" [(ngModel)]="EquipID"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Applied Acres</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Acres"></ion-input>\n    </div>\n\n    <div class="weight-wrapper">\n      <button ion-button class="login-btn" (click)="onNotes();">Notes</button>\n    </div>\n\n    <div class="weight-wrapper">\n      <button ion-button class="submit-btn" (click)="onSubmit();">\n        Submit to current jobs Report\n      </button>\n    </div>\n  </div>\n\n\n</ion-content>\n\n\n\n\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/NewJob.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -511,6 +512,7 @@ Spinner = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CurrentJob; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_apiService__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -522,16 +524,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var CurrentJob = (function () {
-    function CurrentJob(navCtrl, navParams) {
+    function CurrentJob(navCtrl, apiService, navParams) {
         this.navCtrl = navCtrl;
+        this.apiService = apiService;
         this.navParams = navParams;
+        this.job_list = [];
     }
     CurrentJob.prototype.onCreateNewJob = function () {
     };
     CurrentJob.prototype.onCurrentJobReport = function () {
     };
     CurrentJob.prototype.onPrevious = function () {
+    };
+    CurrentJob.prototype.onJob = function (index) {
+        alert(index);
+    };
+    CurrentJob.prototype.ngOnInit = function () {
+        var _this = this;
+        var data = {};
+        this.apiService.post('/job/search', data, 'Loading...').subscribe(function (data) {
+            console.log('DATA', data);
+            _this.job_list = data.response;
+        }, function (error) {
+            console.log(error);
+        });
     };
     CurrentJob.prototype.onBack = function () {
         this.navCtrl.pop();
@@ -540,12 +558,12 @@ var CurrentJob = (function () {
 }());
 CurrentJob = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-currentjob',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/CurrentJob/CurrentJob.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Current Job List\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content no-bounce class="pageten1">\n\n  <div class="mainjsets">\n<div style="padding:0px;">\n  <div class="setone4 juniques secondary">\n    <img src="http://i.imgur.com/siO683I.png">\n    <div class="topset1">View Jobs</div>\n    <div class="topset2">See list of jobs awaiting completion</div>\n  </div>\n</div>\n</div>\n\n\n\n<div class="pad15">\n	<div class="unitoflist1">\n		<div class="numsettings"></div>\n		<div class="maincontlist">\n			<div class="topcont01">\n				<div class="editcontain1">\n					<img src="http://i.imgur.com/usfKMdE.png" class="iconimg1">\n				</div>\n				<div class="firstunitleft">\n					<div class="fieldunittops">\n						<img src="http://i.imgur.com/kXQX121.png">\n						<div class="fieldtext1 first">Hillside Farms</div>\n					</div>\n\n					<div class="fieldunittops">\n						<img src="http://i.imgur.com/iz2rzyO.png">\n						<div class="fieldtext1 seconds">Jason Hilton</div>\n					</div>\n				</div>\n			</div>\n			<div class="tablethirds1">\n				<div class="thirdfirst1">\n					<div class="triotitle1">Date</div>\n					<div class="triodisplay1">08/20/17</div>\n				</div>\n				<div class="triosecond2">\n					<div class="triotitle1">Field</div>\n					<div class="triodisplay1">Joan Drive</div>\n				</div>\n				<div class="triothird3">\n					<div class="triotitle1">Applied Acres</div>\n					<div class="triodisplay1">24</div>\n				</div>\n			</div>\n		</div>\n	</div>\n\n	<div class="unitoflist1">\n		<div class="numsettings"></div>\n		<div class="maincontlist">\n			<div class="topcont01">\n				<div class="editcontain1">\n					<img src="http://i.imgur.com/usfKMdE.png" class="iconimg1">\n				</div>\n				<div class="firstunitleft">\n					<div class="fieldunittops">\n						<img src="http://i.imgur.com/kXQX121.png">\n						<div class="fieldtext1 first">Hillside Farms</div>\n					</div>\n\n					<div class="fieldunittops">\n						<img src="http://i.imgur.com/iz2rzyO.png">\n						<div class="fieldtext1 seconds">Jason Hilton</div>\n					</div>\n				</div>\n			</div>\n			<div class="tablethirds1">\n				<div class="thirdfirst1">\n					<div class="triotitle1">Date</div>\n					<div class="triodisplay1">08/20/17</div>\n				</div>\n				<div class="triosecond2">\n					<div class="triotitle1">Field</div>\n					<div class="triodisplay1">Joan Drive</div>\n				</div>\n				<div class="triothird3">\n					<div class="triotitle1">Applied Acres</div>\n					<div class="triodisplay1">24</div>\n				</div>\n			</div>\n		</div>\n	</div>\n\n</div>\n\n<div class="sendwraps1 notesa" style="">\n  <div class="buttonsub1s" (click)="onSubmit();">Submit Jobs</div>\n</div>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/CurrentJob/CurrentJob.html"*/
+        selector: 'page-currentjob',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/CurrentJob/CurrentJob.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Current Job List\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content class="pageten2" style="">\n\n  <div class="mainjsets">\n    <div style="padding:0px;">\n      <div class="setone4 juniques secondary">\n        <img src="http://i.imgur.com/siO683I.png">\n        <div class="topset1">View Jobs</div>\n        <div class="topset2">See list of jobs awaiting completion</div>\n      </div>\n    </div>\n  </div>\n\n\n\n  <div class="pad15">\n    <div *ngFor="let item of job_list; let idIdx = index;" (click)="onJob(idIdx)" class="unitoflist1">\n      <div class="numsettings"></div>\n      <div class="maincontlist">\n        <div class="topcont01">\n          <div class="editcontain1">\n            <img src="http://i.imgur.com/usfKMdE.png" class="iconimg1">\n          </div>\n          <div class="firstunitleft">\n            <div class="fieldunittops">\n              <img src="http://i.imgur.com/kXQX121.png">\n              <div class="fieldtext1 first">{{item.User}}</div>\n            </div>\n\n            <div class="fieldunittops">\n              <img src="http://i.imgur.com/iz2rzyO.png">\n              <div class="fieldtext1 seconds">{{item.FarmName}}</div>\n            </div>\n          </div>\n        </div>\n        <div class="tablethirds1">\n          <div class="thirdfirst1">\n            <div class="triotitle1">Date</div>\n            <div class="triodisplay1">{{item.Date}}</div>\n          </div>\n          <div class="triosecond2">\n            <div class="triotitle1">Field</div>\n            <div class="triodisplay1">{{item.FieldName}}</div>\n          </div>\n          <div class="triothird3">\n            <div class="triotitle1">Applied Acres</div>\n            <div class="triodisplay1">{{item.Acres}}</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class="sendwraps1 notesa" style="">\n    <div class="buttonsub1s" (click)="onSubmit();">Submit Jobs</div>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/CurrentJob/CurrentJob.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_apiService__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_apiService__["a" /* ApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _c || Object])
 ], CurrentJob);
 
+var _a, _b, _c;
 //# sourceMappingURL=CurrentJob.js.map
 
 /***/ }),
@@ -1303,8 +1321,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var API_BASEURL = 'http://dan.wolodeploy.com/public';
-// const API_BASEURL = 'http://172.20.11.60/Brooks/public';
+// const API_BASEURL = 'http://dan.wolodeploy.com/public';
+var API_BASEURL = 'http://172.20.11.60/Brooks/public';
 var ApiService = (function () {
     function ApiService(http, spinner) {
         this.http = http;
@@ -1405,10 +1423,10 @@ var ApiService = (function () {
 }());
 ApiService = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */],
-        __WEBPACK_IMPORTED_MODULE_5__spinnerService__["a" /* Spinner */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__spinnerService__["a" /* Spinner */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__spinnerService__["a" /* Spinner */]) === "function" && _b || Object])
 ], ApiService);
 
+var _a, _b;
 //# sourceMappingURL=apiService.js.map
 
 /***/ })
