@@ -28,6 +28,7 @@ import {OtherRoutine} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/
 import {ApiService} from '../services/apiService';
 import {Spinner} from '../services/spinnerService';
 import {AppSplashScreen} from "../pages/AppSplashScreen/AppSplashScreen";
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import {AppSplashScreen} from "../pages/AppSplashScreen/AppSplashScreen";
     SplashScreen,
     ApiService,
     Spinner,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

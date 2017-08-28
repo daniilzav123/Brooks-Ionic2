@@ -13,18 +13,22 @@
 <div class="padspec7">
 	<div class="toptextholds">
 		<div class="placedirects">Add any information relevant to this job, which should be saved.</div>
-		<textarea placeholder="Write here.." class="notestexts"></textarea>
+		<textarea placeholder="Write here.." class="notestexts" [(ngModel)]="note" ></textarea>
 	</div>
 </div>
 
 <div class="pad15">
 	<div class="photobutton1">
 		<img src="http://i.imgur.com/VIuctbn.png" style="">
-		<div class="textphotobt">Add Photos</div>
+		<div class="textphotobt" (click)="onCamera();">Add Photos</div>
 	</div>
 </div>
 
-<div class="sendwraps1 notesa" style="">
+  <div class="pad15">
+    <div *ngIf="photoAdded" class="photobutton1" [ngStyle]="{'background-image': 'url(' + photoUrl + ')'}"></div>
+  </div>
+
+  <div class="sendwraps1 notesa" style="">
   <div class="buttonsub1s " (click)="onSubmit();">Save Notes</div>
 </div>
 

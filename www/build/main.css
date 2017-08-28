@@ -25705,7 +25705,7 @@ page-newjob .scroll-content {
   resize: none;
   border: 0px solid;
   width: 100%;
-  height: calc(50vh - 64px);
+  height: calc(50vh - 164px);
   padding: 15px;
 }
 
