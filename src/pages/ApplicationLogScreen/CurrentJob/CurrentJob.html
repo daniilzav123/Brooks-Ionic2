@@ -1,21 +1,104 @@
-<ion-content padding>
+<ion-header style="">
+  <ion-navbar>
+    <ion-title>
+      Current Job List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 
-  <div class="iconback-global" (click)="onBack();"></div>
 
-  <div class="back-padding-vertical-mini"></div>
 
-  <div class="weight-fixed">
-    <ion-label class="label">List of all entered jobs</ion-label>
+<ion-content no-bounce class="pageten1">
+
+  <div class="mainjsets">
+<div style="padding:0px;">
+  <div class="setone4 juniques secondary">
+    <img src="http://i.imgur.com/siO683I.png">
+    <div class="topset1">View Jobs</div>
+    <div class="topset2">See list of jobs awaiting completion</div>
   </div>
+</div>
+</div>
 
-  <ion-scroll class="scroll-wrapper" scrollY="true">
-    <div class="weight-fixed" *ngFor="let item of job_list; let idIdx = index;" (click)="onJob(idIdx)">
-      <ion-label class="username-input">{{item.id}}</ion-label>
-    </div>
-  </ion-scroll>
 
-  <button ion-button class="global-submit-button">
-    Submit Current Report
-  </button>
+
+<div class="pad15">
+	<div class="unitoflist1">
+		<div class="numsettings"></div>
+		<div class="maincontlist">
+			<div class="topcont01">
+				<div class="editcontain1">
+					<img src="http://i.imgur.com/usfKMdE.png" class="iconimg1">
+				</div>
+				<div class="firstunitleft">
+					<div class="fieldunittops">
+						<img src="http://i.imgur.com/kXQX121.png">
+						<div class="fieldtext1 first">Hillside Farms</div>
+					</div>
+
+					<div class="fieldunittops">
+						<img src="http://i.imgur.com/iz2rzyO.png">
+						<div class="fieldtext1 seconds">Jason Hilton</div>
+					</div>
+				</div>
+			</div>
+			<div class="tablethirds1">
+				<div class="thirdfirst1">
+					<div class="triotitle1">Date</div>
+					<div class="triodisplay1">08/20/17</div>
+				</div>
+				<div class="triosecond2">
+					<div class="triotitle1">Field</div>
+					<div class="triodisplay1">Joan Drive</div>
+				</div>
+				<div class="triothird3">
+					<div class="triotitle1">Applied Acres</div>
+					<div class="triodisplay1">24</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="unitoflist1">
+		<div class="numsettings"></div>
+		<div class="maincontlist">
+			<div class="topcont01">
+				<div class="editcontain1">
+					<img src="http://i.imgur.com/usfKMdE.png" class="iconimg1">
+				</div>
+				<div class="firstunitleft">
+					<div class="fieldunittops">
+						<img src="http://i.imgur.com/kXQX121.png">
+						<div class="fieldtext1 first">Hillside Farms</div>
+					</div>
+
+					<div class="fieldunittops">
+						<img src="http://i.imgur.com/iz2rzyO.png">
+						<div class="fieldtext1 seconds">Jason Hilton</div>
+					</div>
+				</div>
+			</div>
+			<div class="tablethirds1">
+				<div class="thirdfirst1">
+					<div class="triotitle1">Date</div>
+					<div class="triodisplay1">08/20/17</div>
+				</div>
+				<div class="triosecond2">
+					<div class="triotitle1">Field</div>
+					<div class="triodisplay1">Joan Drive</div>
+				</div>
+				<div class="triothird3">
+					<div class="triotitle1">Applied Acres</div>
+					<div class="triodisplay1">24</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="sendwraps1 notesa" style="">
+  <div class="buttonsub1s" (click)="onSubmit();">Submit Jobs</div>
+</div>
 
 </ion-content>

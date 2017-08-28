@@ -1,22 +1,66 @@
-<ion-content padding>
+<ion-header class="removebacks">
+  <ion-navbar>
 
-  <div class="iconback-global" (click)="onBack();"></div>
+    <ion-title style="text-align:center">
+      Home
+    </ion-title>
+    <img class="topavatar" src="https://www.popvox.com/images/user-avatar-grey.png">
 
-  <div class="back-padding-vertical"></div>
+  </ion-navbar>
+</ion-header>
 
-  <div class="weight-wrapper">
-    <button ion-button class="login-btn" (click)="onApplicationLog();">Application Log</button>
+
+
+<ion-content style="background:#f2f2f2;">
+
+<div class="topbanne">
+  <div class="secondwrap">
+    <div class="tcenter ftitle cwhite jsone">Welcome James</div>
+    <div class="tcenter cwhite jstwo">View and manage your work processes</div>
   </div>
+</div>
 
-  <div class="weight-wrapper">
-    <button ion-button class="login-btn" (click)="onEquipmentLog();">Equipment Log</button>
-  </div>
+<div style="height:15px;width:100%;"></div>
 
-  <div class="weight-wrapper">
-    <button ion-button class="login-btn" (click)="onReminder();">Tasks/Reminders</button>
-  </div>
+<div style="padding:15px;">
+  <div class="specsmalls">Resources</div>
+</div>
 
-  <button ion-button class="global-submit-button" (click)="onLogout();">
+
+
+<div class="settrion" (click)="onApplicationLog();">
+  <img class="one" src="http://i.imgur.com/JnJLvOx.png">
+  <div class="trititle">Application Log</div>
+  <div class="trisubline">Create jobs, view current jobs, submit current jobs, and view previous reports</div>
+</div>
+
+<div class="settrion" (click)="onEquipmentLog();">
+  <img class="two" src="http://i.imgur.com/8yvvGXk.png">
+  <div class="trititle">Equipment Log</div>
+  <div class="trisubline">Create jobs, view current jobs, submit current jobs, and view previous reports</div>
+</div>
+
+<div class="settrion" (click)="onReminder();">
+  <img class="three" src="http://i.imgur.com/H5tYHix.png">
+  <div class="trititle">Task / Reminders</div>
+  <div class="trisubline">Create jobs, view current jobs, submit current jobs, and view previous reports</div>
+</div>
+
+
+<button ion-button class="global-submit-button logout134" (click)="onLogout();">
     Logout
   </button>
+
 </ion-content>
+
+
+
+
+
+
+
+
+
+
+
+

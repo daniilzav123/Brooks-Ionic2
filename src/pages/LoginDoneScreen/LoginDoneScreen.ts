@@ -4,7 +4,6 @@ import {ApplicationLogScreen} from "../ApplicationLogScreen/ApplicationLogScreen
 import {EquipmentLogScreen} from "../EquipmentLogScreen/EquipmentLogScreen";
 import {ApiService} from "../../services/apiService";
 import {NativeStorage} from "ionic-native";
-import {SingletonService} from "../../services/singletoneService";
 
 @Component({
   selector: 'page-logindonescreen',
@@ -16,7 +15,6 @@ export class LoginDoneScreen {
     public navCtrl: NavController,
     public navParams: NavParams,
     public apiService: ApiService,
-    public singletonService: SingletonService
   ) {
 
   }
@@ -49,10 +47,9 @@ export class LoginDoneScreen {
   }
 
   onLogout() {
-    NativeStorage.setItem('loggedIn', "")
+    NativeStorage.setItem('loggedIn', false)
       .then((d) => {
         console.log('wa true' + d);
-        this.singletonService.loginUser = "";
         this.navCtrl.pop();
       }, error => console.error('Error storing LoginData', error));
   }

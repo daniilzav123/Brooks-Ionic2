@@ -8,36 +8,8 @@ page-notes {
     .weight-wrapper {
       width: 100%;
       text-align: center;
-
-      textarea {
-        width: 100%;
-        background-color: wheat;
-        border-radius: 5px;
-        border: none;
-        padding: 10px;
-        margin-bottom: 5px;
-        letter-spacing: 2px;
-      }
-
-      .camera-image {
-        display: inline-block;
-        background-image: url('../assets/images/camera.png');
-        width: 60px;
-        height: 60px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-top: 30px;
-      }
-
-      .photoAdded {
-        display: inline-block;
-        background-image: url('../assets/images/camera.png');
-        width: 150px;
-        height: 150px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-top: 30px;
-      }
+      margin-top: 50px;
     }
+
   }
 }

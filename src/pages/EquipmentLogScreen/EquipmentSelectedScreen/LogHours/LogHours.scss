@@ -5,33 +5,17 @@ page-loghours {
     overflow-y: hidden;
     background: none;
 
-
     .weight-fixed {
       padding-left: 20px;
       padding-right: 20px;
       margin-top: 20px;
 
-      .date-picker {
-        background-color: transparent;
-      }
-
       .username-input {
-        background-color: transparent;
+        background-color: lightgray;
       }
 
       .password-input {
         background-color: lightgray;
-      }
-
-      .center-label {
-        text-align: center;
-      }
-
-      .date {
-        background-color: lightgray;
-        border-radius: 5px;
-        padding-top: 15px;
-        padding-bottom: 15px;
       }
     }
 
@@ -40,12 +24,5 @@ page-loghours {
       text-align: center;
       margin-top: 50px;
     }
-
-    .scroll-wrapper {
-      width: 100%;
-      height: 40%;
-      padding-bottom: 10px;
-    }
-
   }
 }

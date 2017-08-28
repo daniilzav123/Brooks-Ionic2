@@ -1,5 +1,53 @@
-<ion-content padding>
+<ion-header>
+  <ion-navbar>
 
+    <ion-buttons (click)="goback();" style="position: absolute;color:white;">
+        
+    </ion-buttons>
+
+  
+
+    <ion-title style="text-align:center">
+      Application Log
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="pageten1">
+
+<div style="background:rgba(255, 255, 255, 0.69);box-shadow:0px 0px 10px #adadad;">
+<div style="padding:15px;padding-top:30px;font-weight:500;color:#696969;padding-bottom:0px;">Select an option</div>
+
+<div style="padding:15px;padding-bottom:1px;">
+  <div class="setone4 juniques" (click)="onCreateNewJob();">
+    <img src="http://i.imgur.com/PLjkYu6.png">
+    <div class="topset1">Create New Job</div>
+    <div class="topset2">Add a new task in your application log</div>
+  </div>
+</div>
+</div>
+
+<div style="padding:15px;">
+  <div class="resttwo1 juniques" (click)="onCurrentJobReport();">
+    <img src="http://i.imgur.com/siO683I.png">
+    <div class="topset1">Current Job Report</div>
+    <div class="topset2">View current application work log, and submit.</div>
+  </div>
+
+  <div class="resttwo1 juniques three" (click)="onPrevious();">
+    <img src="http://i.imgur.com/5xEAMzR.png">
+    <div class="topset1">Previous Reports</div>
+    <div class="topset2">View previous submitted reports.</div>
+  </div>
+</div>
+
+
+
+
+
+<div style="display:none;">
   <div class="iconback-global" (click)="onBack();"></div>
 
   <div class="back-padding-vertical"></div>
@@ -15,5 +63,5 @@
   <div class="weight-wrapper">
     <button ion-button class="login-btn" (click)="onPrevious();">Previous Reports</button>
   </div>
-
+</div>
 </ion-content>

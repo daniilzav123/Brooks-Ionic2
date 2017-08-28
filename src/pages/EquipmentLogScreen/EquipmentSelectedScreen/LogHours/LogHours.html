@@ -1,35 +1,72 @@
-<ion-content padding>
+<ion-header style="">
+  <ion-navbar>
+    <ion-title>
+      Log Hours
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 
-  <div class="iconback-global" (click)="onBack();"></div>
+<ion-content no-bounce class="pageten2" style="">
 
-  <div class="back-padding-vertical-mini"></div>
 
-  <div class="weight-fixed">
-    <ion-item>
-      <ion-label>Date</ion-label>
-      <ion-datetime class="date-picker" [(ngModel)]="myDate"></ion-datetime>
-    </ion-item>
-    <ion-item>
-      <ion-label>Enter Current Hours</ion-label>
-      <ion-input class="username-input" [(ngModel)]="myHour"></ion-input>
-    </ion-item>
+<div class="pad15">
+<div class="specpad76">
+  <div class="weight-fixeds">
+    <div class="enterinfo1">Enter Information</div>
+    <ion-input placeholder="Date" style="" class="username-input mgb12"></ion-input>
   </div>
 
-  <div class="weight-wrapper">
-    <ion-label>List of previously submitted hours</ion-label>
+  <div class="weight-fixeds">
+    <ion-input placeholder="Hours" class="username-input" type="password"></ion-input>
   </div>
 
-  <ion-scroll class="scroll-wrapper" scrollY="true">
-    <div class="weight-fixed" *ngFor="let item of job_list; let idIdx = index;">
-      <ion-item>
-        <ion-label>{{item.Date}}</ion-label>
-        <ion-label>{{item.Hour}}</ion-label>
-      </ion-item>
+  <div class="weight-wrappers mgt20" style="">
+    <button ion-button class="login-btn button04" (click)="onLogin();">Submit Hours</button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<div class="pad15 padtop0"> 
+  <div class="bshad2" style="">
+
+    <div class="bgsome1">
+      <div class="loghist123">Log History</div>
+    
+    <div class="tableset8">
+      <div class="widthhalf">
+        <div class="padleftonly">Date</div>
+      </div>
+      <div class="widthhalf">
+        <div class="padleftonly">Hours</div>
+      </div>
     </div>
-  </ion-scroll>
+
+    </div>
+
+    <div class="logunit2">
+      <div class="widthhalf"><div class="padunit04">08/26/2017</div></div>
+      <div class="widthhalf"><div class="padunit04">7</div></div>
+    </div>
+
+    <div class="logunit2">
+      <div class="widthhalf"><div class="padunit04">08/26/2017</div></div>
+      <div class="widthhalf"><div class="padunit04">7</div></div>
+    </div>
+
+    <div class="logunit2">
+      <div class="widthhalf"><div class="padunit04">08/26/2017</div></div>
+      <div class="widthhalf"><div class="padunit04">7</div></div>
+    </div>
+
+  </div>
+</div>
 
 
-  <button ion-button class="global-submit-button" (click)="onSubmit();">
-    Submit
-  </button>
 </ion-content>
+
+
+

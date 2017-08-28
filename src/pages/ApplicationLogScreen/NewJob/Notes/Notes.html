@@ -1,18 +1,41 @@
-<ion-content padding>
-
-  <div class="iconback-global" (click)="onBack();"></div>
-
-  <div class="back-padding-vertical-mini"></div>
-
-  <div class="weight-wrapper">
-    <textarea rows="5" type="text" placeholder="Describe notes" [(ngModel)]="note"></textarea>
-    <div class="camera-image" (click)="onCamera();"></div>
-    <br/>
-    <div *ngIf="photoAdded" class="photoAdded" [ngStyle]="{'background-image': 'url(' + photoUrl + ')'}"></div>
-  </div>
+<ion-header style="">
+  <ion-navbar>
+    <ion-title>
+      Add Notes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 
 
-  <button ion-button class="global-submit-button" (click)="onSubmit();">
-    Submit
-  </button>
+<ion-content no-bounce class="pageten1" style="">
+
+
+<div class="padspec7">
+	<div class="toptextholds">
+		<div class="placedirects">Add any information relevant to this job, which should be saved.</div>
+		<textarea placeholder="Write here.." class="notestexts"></textarea>
+	</div>
+</div>
+
+<div class="pad15">
+	<div class="photobutton1">
+		<img src="http://i.imgur.com/VIuctbn.png" style="">
+		<div class="textphotobt">Add Photos</div>
+	</div>
+</div>
+
+<div class="sendwraps1 notesa" style="">
+  <div class="buttonsub1s " (click)="onSubmit();">Save Notes</div>
+</div>
+
+
+
+
+
+
 </ion-content>
+
+
+
+
+

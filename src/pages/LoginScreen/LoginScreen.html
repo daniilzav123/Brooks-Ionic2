@@ -1,20 +1,54 @@
-<ion-content padding>
+<ion-header>
+  <ion-navbar>
+
+    <ion-buttons (click)="goback();" style="position: absolute;color:white;">
+        
+    </ion-buttons>
+
+  
+
+    <ion-title style="text-align:center">
+      Login to your account
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+
+
+<ion-content padding1 class="set1 setunivbuttons" style="">
+
+
+
+
+
 
   <div class="iconback-global" (click)="onBack();"></div>
 
-  <div class="back-padding-vertical"></div>
+  
 
-  <div class="weight-fixed">
-    <ion-label>Username</ion-label>
-    <ion-input class="username-input" [(ngModel)]="username"></ion-input>
+
+
+<div style="padding:20px;margin-top:calc(50vh - 162.5px);background:#f2f2f2;border-radius:4px;box-shadow:0px 0px 10px #424242;">
+  <div class="weight-fixeds">
+    
+    <ion-input placeholder="Username" style="margin-bottom:20px;" class="username-input" [(ngModel)]="username"></ion-input>
   </div>
 
-  <div class="weight-fixed">
-    <ion-label>Password</ion-label>
-    <ion-input class="username-input" type="password" [(ngModel)]="password"></ion-input>
+  <div class="weight-fixeds">
+   
+    <ion-input placeholder="Password" class="username-input" type="password" [(ngModel)]="password"></ion-input>
   </div>
 
-  <div class="weight-wrapper">
+  <div class="weight-wrappers" style="margin-top:20px;">
     <button ion-button class="login-btn" (click)="onLogin();">Login</button>
   </div>
+</div>
+
+<div style="position:absolute;bottom:0px;left:0px;right:0px;width:100%;padding:20px 25px;background: rgba(0, 0, 0, 0.17);">
+  <button ion-button>Don't Have An Account?</button>
+</div>
+
+
 </ion-content>

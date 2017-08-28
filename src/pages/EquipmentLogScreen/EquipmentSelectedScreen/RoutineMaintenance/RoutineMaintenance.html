@@ -1,19 +1,44 @@
-<ion-content padding>
+<ion-header style="">
+  <ion-navbar>
+    <ion-title>
+      Routine Maintenance
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 
-  <div class="iconback-global" (click)="onBack();"></div>
+<ion-content no-bounce class="pageten2" style="">
 
-  <div class="back-padding-vertical-mini"></div>
 
-  <div class="weight-wrapper">
-    <button ion-button class="login-btn" (click)="onMachineWash()">Machine Wash</button>
+<div class="mainjsets bgwhite">
+<div style="padding:0px;">
+  <div class="setone4 juniques secondary">
+    <img class="two" src="http://i.imgur.com/8yvvGXk.png">
+    <div class="topset1">Maintenance Type</div>
+    <div class="topset2">Select the type of maintenance performed</div>
   </div>
+</div>
+</div>
 
-  <div class="weight-wrapper">
-    <button ion-button class="login-btn" (click)="onGrease()">Grease</button>
-  </div>
 
-  <div class="weight-wrapper">
-    <button ion-button class="login-btn" (click)="onOtherRoutine()">Other Routine Maint.</button>
-  </div>
+
+<div class="pad15" style="padding-top:25px;padding-bottom:0px;">
+  <div class="specsmalls spec121">Actions</div>
+</div>
+
+
+
+<div class="pad15">
+  <div class="equipfour" (click)="onMachineWash()"><img src="http://i.imgur.com/1x6qMWZ.png">Machine Wash</div>
+  <div class="equipfour" (click)="onGrease()"><img src="http://i.imgur.com/4qJxnSA.png">Grease</div>
+  <div class="equipfour"><img src="http://i.imgur.com/zv0krOH.png">Cab Clean</div>
+  <div class="equipfour"><img src="http://i.imgur.com/2IFlti2.png">Chain Oiled</div>
+  <div class="equipfour"><img src="http://i.imgur.com/snPGMFa.png">Chain Tension</div>
+  <div class="equipfour" (click)="onOtherRoutine()"><img src="http://i.imgur.com/CQUHdJa.png">Other</div>
+</div>
+
+
+
 
 </ion-content>
+
+

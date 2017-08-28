@@ -29,10 +29,6 @@ import {ApiService} from '../services/apiService';
 import {Spinner} from '../services/spinnerService';
 import {AppSplashScreen} from "../pages/AppSplashScreen/AppSplashScreen";
 
-import { Camera } from '@ionic-native/camera';
-import {NativeStorage} from "ionic-native";
-import {SingletonService} from "../services/singletoneService";
-
 @NgModule({
   declarations: [
     MyApp,
@@ -89,9 +85,6 @@ import {SingletonService} from "../services/singletoneService";
     SplashScreen,
     ApiService,
     Spinner,
-    Camera,
-    NativeStorage,
-    SingletonService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

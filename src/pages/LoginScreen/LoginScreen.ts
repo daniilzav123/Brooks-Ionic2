@@ -3,20 +3,19 @@ import { NavController, NavParams} from 'ionic-angular';
 import {LoginDoneScreen} from "../LoginDoneScreen/LoginDoneScreen";
 import {ApiService} from "../../services/apiService"
 import {NativeStorage} from "ionic-native";
-import {SingletonService} from "../../services/singletoneService";
 
 @Component({
   selector: 'page-loginscreen',
   templateUrl: 'LoginScreen.html'
 })
 export class LoginScreen {
+
   username: string;
   password: string;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public apiService: ApiService,
-    public singletonService: SingletonService
+    public apiService: ApiService
   ) {
     this.username = "";
     this.password = "";
@@ -30,8 +29,7 @@ export class LoginScreen {
     this.apiService.post('/login', data, 'Logging in...').subscribe(
       data => {
         console.log('DATA', data);
-        this.singletonService.loginUser = this.username;
-        NativeStorage.setItem('loggedIn', this.username)
+        NativeStorage.setItem('loggedIn', true)
           .then((d) => {
             console.log('wa true' + d);
             this.navCtrl.push(LoginDoneScreen);

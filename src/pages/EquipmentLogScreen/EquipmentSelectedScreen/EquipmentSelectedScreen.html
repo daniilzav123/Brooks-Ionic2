@@ -1,23 +1,42 @@
-<ion-content padding>
+<ion-header style="">
+  <ion-navbar>
+    <ion-title>
+      Equipment Details
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 
-  <div class="iconback-global" (click)="onBack();"></div>
+<ion-content no-bounce class="pageten2" style="">
 
-  <div class="back-padding-vertical-mini"></div>
 
-  <div class="weight-wrapper">
-    <button ion-button class="login-btn" (click)="onLogHours()">Log Hours</button>
+<div class="mainjsets bgwhite">
+<div style="padding:0px;">
+  <div class="setone4 juniques secondary">
+    <img class="two" src="http://i.imgur.com/8yvvGXk.png">
+    <div class="topset1">Equipment Actions</div>
+    <div class="topset2">Perform a wide array of equipment managing functions</div>
   </div>
+</div>
+</div>
 
-  <div class="weight-wrapper">
-    <button ion-button class="login-btn" (click)="onRoutineMaintenance()">Routine Maintenance</button>
-  </div>
 
-  <div class="weight-wrapper">
-    <button ion-button class="login-btn" (click)="onScheduledMaint()">Scheduled Maintenance</button>
-  </div>
 
-  <div class="weight-wrapper">
-    <button ion-button class="login-btn" (click)="onRepairs()">Repairs</button>
-  </div>
+<div class="pad15" style="padding-top:25px;padding-bottom:0px;">
+  <div class="specsmalls spec121">Actions</div>
+</div>
+
+
+
+<div class="pad15">
+  <div class="equipfour" (click)="onLogHours()"><img src="http://i.imgur.com/bZjgxNG.png">Log Hours</div>
+  <div class="equipfour" (click)="onRoutineMaintenance()"><img src="http://i.imgur.com/9jbPues.png">Routine Maintenance</div>
+  <div class="equipfour" (click)="onScheduledMaint()"><img src="http://i.imgur.com/zWsydmQ.png">Scheduled Maintenance</div>
+  <div class="equipfour" (click)="onRepairs()"><img src="http://i.imgur.com/PTHrOsU.png">Repairs</div>
+</div>
+
+
+
 
 </ion-content>
+
+

@@ -1,17 +1,55 @@
-<ion-content padding>
+<ion-header style="">
+  <ion-navbar>
+    <ion-title>
+      Equipment
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 
-  <div class="iconback-global" (click)="onBack();"></div>
+<ion-content no-bounce class="pageten2" style="">
 
-  <div class="back-padding-vertical-mini"></div>
-
-  <div class="weight-wrapper">
-    <ion-label>Select Equipment</ion-label>
+  <div class="mainjsets bgwhite">
+<div style="padding:0px;">
+  <div class="setone4 juniques secondary">
+    <img class="two" src="http://i.imgur.com/8yvvGXk.png">
+    <div class="topset1">Assigned Equipment</div>
+    <div class="topset2">Below are the equipment assigned to you</div>
   </div>
+</div>
+</div>
 
-  <ion-scroll class="scroll-wrapper" scrollY="true">
-    <div class="weight-fixed" *ngFor="let item of job_list; let idIdx = index;" (click)="onJob(idIdx)">
-      <ion-label class="username-input">{{item.id}}</ion-label>
-    </div>
-  </ion-scroll>
+
+
+<div class="pad15">
+	
+
+
+	<div class="equipitems" (click)="onSelect();">
+		<div class="toolnametitle">Tool Name</div>
+		<div class="toolactualname">Farm Cutting Blade</div>
+		<div class="toolsmallnote">This tool is in your possesion</div>
+	</div>
+
+	<div class="equipitems" (click)="onSelect();">
+		<div class="toolnametitle">Tool Name</div>
+		<div class="toolactualname">Farm Cutting Blade</div>
+		<div class="toolsmallnote">This tool is in your possesion</div>
+	</div>
+
+	<div class="equipitems" (click)="onSelect();">
+		<div class="toolnametitle">Tool Name</div>
+		<div class="toolactualname">Farm Cutting Blade</div>
+		<div class="toolsmallnote">This tool is in your possesion</div>
+	</div>
+
+</div>
+
+
 
 </ion-content>
+
+
+
+
+
+

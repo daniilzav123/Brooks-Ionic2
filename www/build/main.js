@@ -1,17 +1,16 @@
 webpackJsonp([0],{
 
-/***/ 128:
+/***/ 125:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginDoneScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ApplicationLogScreen_ApplicationLogScreen__ = __webpack_require__(235);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__EquipmentLogScreen_EquipmentLogScreen__ = __webpack_require__(244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_apiService__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_native__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_singletoneService__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ApplicationLogScreen_ApplicationLogScreen__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__EquipmentLogScreen_EquipmentLogScreen__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_apiService__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_native__ = __webpack_require__(126);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -27,13 +26,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var LoginDoneScreen = (function () {
-    function LoginDoneScreen(navCtrl, navParams, apiService, singletonService) {
+    function LoginDoneScreen(navCtrl, navParams, apiService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.apiService = apiService;
-        this.singletonService = singletonService;
     }
     LoginDoneScreen.prototype.onApplicationLog = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__ApplicationLogScreen_ApplicationLogScreen__["a" /* ApplicationLogScreen */]);
@@ -56,10 +53,9 @@ var LoginDoneScreen = (function () {
     };
     LoginDoneScreen.prototype.onLogout = function () {
         var _this = this;
-        __WEBPACK_IMPORTED_MODULE_5_ionic_native__["a" /* NativeStorage */].setItem('loggedIn', "")
+        __WEBPACK_IMPORTED_MODULE_5_ionic_native__["a" /* NativeStorage */].setItem('loggedIn', false)
             .then(function (d) {
             console.log('wa true' + d);
-            _this.singletonService.loginUser = "";
             _this.navCtrl.pop();
         }, function (error) { return console.error('Error storing LoginData', error); });
     };
@@ -67,19 +63,18 @@ var LoginDoneScreen = (function () {
 }());
 LoginDoneScreen = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-logindonescreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginDoneScreen/LoginDoneScreen.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical"></div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onApplicationLog();">Application Log</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onEquipmentLog();">Equipment Log</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onReminder();">Tasks/Reminders</button>\n  </div>\n\n  <button ion-button class="global-submit-button" (click)="onLogout();">\n    Logout\n  </button>\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginDoneScreen/LoginDoneScreen.html"*/
+        selector: 'page-logindonescreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginDoneScreen/LoginDoneScreen.html"*/'<ion-header class="removebacks">\n  <ion-navbar>\n\n    <ion-title style="text-align:center">\n      Home\n    </ion-title>\n    <img class="topavatar" src="https://www.popvox.com/images/user-avatar-grey.png">\n\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content style="background:#f2f2f2;">\n\n<div class="topbanne">\n  <div class="secondwrap">\n    <div class="tcenter ftitle cwhite jsone">Welcome James</div>\n    <div class="tcenter cwhite jstwo">View and manage your work processes</div>\n  </div>\n</div>\n\n<div style="height:15px;width:100%;"></div>\n\n<div style="padding:15px;">\n  <div class="specsmalls">Resources</div>\n</div>\n\n\n\n<div class="settrion" (click)="onApplicationLog();">\n  <img class="one" src="http://i.imgur.com/JnJLvOx.png">\n  <div class="trititle">Application Log</div>\n  <div class="trisubline">Create jobs, view current jobs, submit current jobs, and view previous reports</div>\n</div>\n\n<div class="settrion" (click)="onEquipmentLog();">\n  <img class="two" src="http://i.imgur.com/8yvvGXk.png">\n  <div class="trititle">Equipment Log</div>\n  <div class="trisubline">Create jobs, view current jobs, submit current jobs, and view previous reports</div>\n</div>\n\n<div class="settrion" (click)="onReminder();">\n  <img class="three" src="http://i.imgur.com/H5tYHix.png">\n  <div class="trititle">Task / Reminders</div>\n  <div class="trisubline">Create jobs, view current jobs, submit current jobs, and view previous reports</div>\n</div>\n\n\n<button ion-button class="global-submit-button logout134" (click)="onLogout();">\n    Logout\n  </button>\n\n</ion-content>\n\n\n\n\n\n\n\n\n\n\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginDoneScreen/LoginDoneScreen.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_4__services_apiService__["a" /* ApiService */],
-        __WEBPACK_IMPORTED_MODULE_6__services_singletoneService__["a" /* SingletonService */]])
+        __WEBPACK_IMPORTED_MODULE_4__services_apiService__["a" /* ApiService */]])
 ], LoginDoneScreen);
 
 //# sourceMappingURL=LoginDoneScreen.js.map
 
 /***/ }),
 
-/***/ 144:
+/***/ 142:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -92,11 +87,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 144;
+webpackEmptyAsyncContext.id = 142;
 
 /***/ }),
 
-/***/ 187:
+/***/ 185:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -109,18 +104,18 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 187;
+webpackEmptyAsyncContext.id = 185;
 
 /***/ }),
 
-/***/ 232:
+/***/ 231:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSplashScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__IntroScreen_IntroScreen__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__IntroScreen_IntroScreen__ = __webpack_require__(232);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -155,17 +150,16 @@ AppSplashScreen = __decorate([
 
 /***/ }),
 
-/***/ 233:
+/***/ 232:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IntroScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LoginScreen_LoginScreen__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_native__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__LoginDoneScreen_LoginDoneScreen__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_singletoneService__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LoginScreen_LoginScreen__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_native__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__LoginDoneScreen_LoginDoneScreen__ = __webpack_require__(125);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -180,24 +174,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var IntroScreen = (function () {
-    function IntroScreen(navCtrl, navParams, singletonService) {
+    function IntroScreen(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.singletonService = singletonService;
     }
-    IntroScreen.prototype.ngOnInit = function () {
+    IntroScreen.prototype.ionViewDidLoad = function () {
         var _this = this;
         console.log('come on ngoninit');
         __WEBPACK_IMPORTED_MODULE_3_ionic_native__["a" /* NativeStorage */].getItem('loggedIn').then(function (d) {
-            if (d == "" || d == null) {
-                console.log('wa false');
+            if (d === true) {
+                console.log('wa true');
+                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__LoginDoneScreen_LoginDoneScreen__["a" /* LoginDoneScreen */]);
             }
             else {
-                console.log('wa true');
-                _this.singletonService.loginUser = d;
-                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__LoginDoneScreen_LoginDoneScreen__["a" /* LoginDoneScreen */]);
+                console.log('wa false');
             }
         }, function (error) {
             console.log('wa error' + error);
@@ -210,28 +201,26 @@ var IntroScreen = (function () {
 }());
 IntroScreen = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-introscreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/IntroScreen/IntroScreen.html"*/'<ion-content padding>\n  <div class="weight-wrapper">\n    <div class="logo-image"></div>\n    <ion-label class="application-label">Application App</ion-label>\n    <button ion-button class="login-btn" (click)="onLogin();">Login</button>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/IntroScreen/IntroScreen.html"*/
+        selector: 'page-introscreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/IntroScreen/IntroScreen.html"*/'\n\n\n<ion-content padding1 style="background:#f2f2f2;" class="setunivbuttons">\n<div class="spec123" style="height:50vh;position:absolute;top:0px;left:0px;right:0px;">\n\n<div style="position:absolute;top:0px;left:0px;right:0px;height:50vh;background:rgba(255, 255, 255, 0.6);"></div>\n\n<div class="weight-wrapper" style="position:absolute;top:0px;left:0px;right:0px;height:50vh;z-index:999;">\n	<div class="logo-image" style="margin:auto;position:absolute;top:0px;left:0px;right:0px;bottom:0px;"></div>\n</div>\n\n\n\n\n</div>\n\n\n\n<div style="position:absolute;top:50vh;left:0px;right:0px;background:#FFF;height:50vh;background:#f2f2f2">\n	<div style="padding:0px;">\n  <div class="weight-wrapper" style="height:initial;border:1px solid #f1f1f1;height:50vh;background:#f2f2f2;padding:25px;">\n\n    <ion-label class="application-label" style="font-size:18px;margin-top:0px;margin-right:0px;text-align:left;line-height:1;color:#848484;">Access Employee Panel</ion-label>\n    <button ion-button class="login-btn" style="margin-top:20px;" (click)="onLogin();"><ion-icon name="briefcase" style="margin-right:15px;"></ion-icon>Login\n	</button>\n\n	<button ion-button class="login-btn" style="margin-top:20px;" (click)="onLogin();"><ion-icon name="briefcase" style="margin-right:15px;"></ion-icon>Register\n	</button>\n\n\n  </div>\n</div>\n</div>\n\n\n\n<div style="position:absolute;bottom:0px;left:0px;right:0px;width:100%;padding:15px;background:#FFF;text-align:center;box-shadow:0px 0px 7px #d4d4d4;color: #ccc;">\n	© Copyright 2017-2018 Brooks Custom Application\n</div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/IntroScreen/IntroScreen.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_5__services_singletoneService__["a" /* SingletonService */]])
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], IntroScreen);
 
 //# sourceMappingURL=IntroScreen.js.map
 
 /***/ }),
 
-/***/ 234:
+/***/ 233:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_apiService__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_native__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_singletoneService__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_apiService__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_native__ = __webpack_require__(126);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -246,13 +235,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var LoginScreen = (function () {
-    function LoginScreen(navCtrl, navParams, apiService, singletonService) {
+    function LoginScreen(navCtrl, navParams, apiService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.apiService = apiService;
-        this.singletonService = singletonService;
         this.username = "";
         this.password = "";
     }
@@ -264,8 +251,7 @@ var LoginScreen = (function () {
         };
         this.apiService.post('/login', data, 'Logging in...').subscribe(function (data) {
             console.log('DATA', data);
-            _this.singletonService.loginUser = _this.username;
-            __WEBPACK_IMPORTED_MODULE_4_ionic_native__["a" /* NativeStorage */].setItem('loggedIn', _this.username)
+            __WEBPACK_IMPORTED_MODULE_4_ionic_native__["a" /* NativeStorage */].setItem('loggedIn', true)
                 .then(function (d) {
                 console.log('wa true' + d);
                 _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__LoginDoneScreen_LoginDoneScreen__["a" /* LoginDoneScreen */]);
@@ -286,28 +272,27 @@ var LoginScreen = (function () {
 }());
 LoginScreen = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-loginscreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginScreen/LoginScreen.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical"></div>\n\n  <div class="weight-fixed">\n    <ion-label>Username</ion-label>\n    <ion-input class="username-input" [(ngModel)]="username"></ion-input>\n  </div>\n\n  <div class="weight-fixed">\n    <ion-label>Password</ion-label>\n    <ion-input class="username-input" type="password" [(ngModel)]="password"></ion-input>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onLogin();">Login</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginScreen/LoginScreen.html"*/
+        selector: 'page-loginscreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginScreen/LoginScreen.html"*/'<ion-header>\n  <ion-navbar>\n\n    <ion-buttons (click)="goback();" style="position: absolute;color:white;">\n        \n    </ion-buttons>\n\n  \n\n    <ion-title style="text-align:center">\n      Login to your account\n    </ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n\n\n\n<ion-content padding1 class="set1 setunivbuttons" style="">\n\n\n\n\n\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  \n\n\n\n<div style="padding:20px;margin-top:calc(50vh - 162.5px);background:#f2f2f2;border-radius:4px;box-shadow:0px 0px 10px #424242;">\n  <div class="weight-fixeds">\n    \n    <ion-input placeholder="Username" style="margin-bottom:20px;" class="username-input" [(ngModel)]="username"></ion-input>\n  </div>\n\n  <div class="weight-fixeds">\n   \n    <ion-input placeholder="Password" class="username-input" type="password" [(ngModel)]="password"></ion-input>\n  </div>\n\n  <div class="weight-wrappers" style="margin-top:20px;">\n    <button ion-button class="login-btn" (click)="onLogin();">Login</button>\n  </div>\n</div>\n\n<div style="position:absolute;bottom:0px;left:0px;right:0px;width:100%;padding:20px 25px;background: rgba(0, 0, 0, 0.17);">\n  <button ion-button>Don\'t Have An Account?</button>\n</div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/LoginScreen/LoginScreen.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_3__services_apiService__["a" /* ApiService */],
-        __WEBPACK_IMPORTED_MODULE_5__services_singletoneService__["a" /* SingletonService */]])
+        __WEBPACK_IMPORTED_MODULE_3__services_apiService__["a" /* ApiService */]])
 ], LoginScreen);
 
 //# sourceMappingURL=LoginScreen.js.map
 
 /***/ }),
 
-/***/ 235:
+/***/ 234:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApplicationLogScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NewJob_NewJob__ = __webpack_require__(236);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__CurrentJob_CurrentJob__ = __webpack_require__(242);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PreviousJob_PreviousJob__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NewJob_NewJob__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__CurrentJob_CurrentJob__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PreviousJob_PreviousJob__ = __webpack_require__(241);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -343,7 +328,7 @@ var ApplicationLogScreen = (function () {
 }());
 ApplicationLogScreen = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-applicationlogscreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/ApplicationLogScreen.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical"></div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onCreateNewJob();">Create New Job</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onCurrentJobReport();">Current Job Report</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onPrevious();">Previous Reports</button>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/ApplicationLogScreen.html"*/
+        selector: 'page-applicationlogscreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/ApplicationLogScreen.html"*/'<ion-header>\n  <ion-navbar>\n\n    <ion-buttons (click)="goback();" style="position: absolute;color:white;">\n        \n    </ion-buttons>\n\n  \n\n    <ion-title style="text-align:center">\n      Application Log\n    </ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content class="pageten1">\n\n<div style="background:rgba(255, 255, 255, 0.69);box-shadow:0px 0px 10px #adadad;">\n<div style="padding:15px;padding-top:30px;font-weight:500;color:#696969;padding-bottom:0px;">Select an option</div>\n\n<div style="padding:15px;padding-bottom:1px;">\n  <div class="setone4 juniques" (click)="onCreateNewJob();">\n    <img src="http://i.imgur.com/PLjkYu6.png">\n    <div class="topset1">Create New Job</div>\n    <div class="topset2">Add a new task in your application log</div>\n  </div>\n</div>\n</div>\n\n<div style="padding:15px;">\n  <div class="resttwo1 juniques" (click)="onCurrentJobReport();">\n    <img src="http://i.imgur.com/siO683I.png">\n    <div class="topset1">Current Job Report</div>\n    <div class="topset2">View current application work log, and submit.</div>\n  </div>\n\n  <div class="resttwo1 juniques three" (click)="onPrevious();">\n    <img src="http://i.imgur.com/5xEAMzR.png">\n    <div class="topset1">Previous Reports</div>\n    <div class="topset2">View previous submitted reports.</div>\n  </div>\n</div>\n\n\n\n\n\n<div style="display:none;">\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical"></div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onCreateNewJob();">Create New Job</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onCurrentJobReport();">Current Job Report</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onPrevious();">Previous Reports</button>\n  </div>\n</div>\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/ApplicationLogScreen.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -353,16 +338,15 @@ ApplicationLogScreen = __decorate([
 
 /***/ }),
 
-/***/ 236:
+/***/ 235:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewJob; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Notes_Notes__ = __webpack_require__(237);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_apiService__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_singletoneService__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Notes_Notes__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_apiService__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -376,14 +360,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var NewJob = (function () {
-    function NewJob(navCtrl, navParams, apiService, singletonService) {
+    function NewJob(navCtrl, navParams, apiService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.apiService = apiService;
-        this.singletonService = singletonService;
-        this.imageUrl = null;
         this.Date = "";
         this.Grower = "";
         this.FarmName = "";
@@ -391,7 +372,6 @@ var NewJob = (function () {
         this.AppType = "";
         this.EquipID = "";
         this.Acres = "";
-        this.note = "";
     }
     NewJob.prototype.onCreateNewJob = function () {
     };
@@ -403,24 +383,18 @@ var NewJob = (function () {
         this.navCtrl.pop();
     };
     NewJob.prototype.onNotes = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__Notes_Notes__["a" /* Notes */], { parent: this });
-    };
-    NewJob.prototype.setNotes = function (str) {
-        this.note = str;
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__Notes_Notes__["a" /* Notes */]);
     };
     NewJob.prototype.onSubmit = function () {
         var _this = this;
         var data = {
-            User: this.singletonService.loginUser,
             Date: this.Date,
             Grower: this.Grower,
             FarmName: this.FarmName,
             FieldName: this.FieldName,
             AppType: this.AppType,
             EquipID: this.EquipID,
-            Acres: this.Acres,
-            note: this.note,
-            imageUrl: ""
+            Acres: this.Acres
         };
         this.apiService.post('/job/create', data, 'Creating Job...').subscribe(function (data) {
             console.log('DATA', data);
@@ -433,26 +407,24 @@ var NewJob = (function () {
 }());
 NewJob = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-newjob',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/NewJob.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <ion-scroll class="scroll-wrapper" scrollY="true">\n\n    <div class="weight-fixed">\n      <ion-label>Date</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Date"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Grower</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Grower"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Farm Name</ion-label>\n      <ion-input class="username-input" [(ngModel)]="FarmName"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Field Name</ion-label>\n      <ion-input class="username-input" [(ngModel)]="FieldName"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Application Type</ion-label>\n      <ion-input class="username-input" [(ngModel)]="AppType"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Equipment ID</ion-label>\n      <ion-input class="username-input" [(ngModel)]="EquipID"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Applied Acres</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Acres"></ion-input>\n    </div>\n\n    <div class="weight-wrapper">\n      <button ion-button class="login-btn" (click)="onNotes();">Notes</button>\n    </div>\n\n    <div class="weight-wrapper">\n      <button ion-button class="submit-btn" (click)="onSubmit();">\n        Submit to current jobs Report\n      </button>\n    </div>\n\n  </ion-scroll>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/NewJob.html"*/
+        selector: 'page-newjob',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/NewJob.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-buttons (click)="goback();" style="position: absolute;color:white;">\n    </ion-buttons>\n    <ion-title style="text-align:center">\n      Create New Job\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content class="pageten1" style="">\n\n  <div class="mainjsets">\n<div style="padding:0px;">\n  <div class="setone4 juniques secondary">\n    <img src="http://i.imgur.com/OYt16qG.png">\n    <div class="topset1">Add Job</div>\n    <div class="topset2">Add a new task in your application log</div>\n  </div>\n</div>\n</div>\n\n\n\n\n\n\n\n<div class="titleunits1">\n  Please fill the following fields\n</div>\n\n<div style="padding:15px;">\n  <ion-input class="inputsten" type="text" placeholder="Date" [(ngModel)]="Date"></ion-input>\n  <ion-input class="inputsten" type="text" placeholder="Grower" [(ngModel)]="Grower"></ion-input>\n  <ion-input class="inputsten" type="text" placeholder="Farm Name" [(ngModel)]="FarmName"></ion-input>\n  <ion-input class="inputsten" type="text" placeholder="Field name" [(ngModel)]="FieldName"></ion-input>\n\n\n\n  <ion-list class="projdrops1">\n  <ion-item>\n    <ion-label style="color:#919394;">Application Type</ion-label>\n    <ion-select [(ngModel)]="AppType">\n      <ion-option value="nes">Flat Rate Fertilizer</ion-option>\n      <ion-option value="n64">Variable Rate Fertilizer</ion-option>\n      <ion-option value="ps">Flat Rate Lime</ion-option>\n      <ion-option value="genesis">Variable Rate Lime</ion-option>\n      <ion-option value="saturn">Other (please explain)</ion-option>\n    </ion-select>\n  </ion-item>\n</ion-list>\n\n\n\n  <ion-input class="inputsten" type="text" placeholder="Equipment ID" [(ngModel)]="EquipID"></ion-input>\n  <ion-input class="inputsten" type="text" placeholder="Applied Acres" [(ngModel)]="Acres"></ion-input>\n\n  <div class="buttonnotes" (click)="onNotes();"><img src="http://i.imgur.com/pYFWoEW.png">Add Notes</div>\n</div>\n\n<div class="sendwraps1">\n  <div class="buttonsub1s" (click)="onSubmit();">Submit New Job</div>\n</div>\n\n\n\n<div style="display:none;">\n    <div class="weight-fixed">\n      <ion-label>Date</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Date"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Grower</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Grower"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Farm Name</ion-label>\n      <ion-input class="username-input" [(ngModel)]="FarmName"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Field Name</ion-label>\n      <ion-input class="username-input" [(ngModel)]="FieldName"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Application Type</ion-label>\n      <ion-input class="username-input" [(ngModel)]="AppType"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Equipment ID</ion-label>\n      <ion-input class="username-input" [(ngModel)]="EquipID"></ion-input>\n    </div>\n\n    <div class="weight-fixed">\n      <ion-label>Applied Acres</ion-label>\n      <ion-input class="username-input" [(ngModel)]="Acres"></ion-input>\n    </div>\n\n    <div class="weight-wrapper">\n      <button ion-button class="login-btn" (click)="onNotes();">Notes</button>\n    </div>\n\n    <div class="weight-wrapper">\n      <button ion-button class="submit-btn" (click)="onSubmit();">\n        Submit to current jobs Report\n      </button>\n    </div>\n</div>\n\n\n</ion-content>\n\n\n\n\n\n\n  '/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/NewJob.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_3__services_apiService__["a" /* ApiService */],
-        __WEBPACK_IMPORTED_MODULE_4__services_singletoneService__["a" /* SingletonService */]])
+        __WEBPACK_IMPORTED_MODULE_3__services_apiService__["a" /* ApiService */]])
 ], NewJob);
 
 //# sourceMappingURL=NewJob.js.map
 
 /***/ }),
 
-/***/ 237:
+/***/ 236:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Notes; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(238);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -464,57 +436,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
 var Notes = (function () {
-    function Notes(navCtrl, navParams, camera) {
+    function Notes(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.camera = camera;
-        this.photoAdded = false;
-        this.photoUrl = null;
-        this.note = "";
     }
     Notes.prototype.onBack = function () {
         this.navCtrl.pop();
     };
     Notes.prototype.onSubmit = function () {
-        this.navParams.get('parent').setNotes(this.note);
         this.navCtrl.pop();
-    };
-    Notes.prototype.onCamera = function () {
-        var _this = this;
-        var options = {
-            quality: 100,
-            destinationType: this.camera.DestinationType.DATA_URL,
-            encodingType: this.camera.EncodingType.JPEG,
-            mediaType: this.camera.MediaType.PICTURE
-        };
-        this.camera.getPicture(options).then(function (imageData) {
-            // imageData is either a base64 encoded string or a file URI
-            // If it's base64:
-            var base64Image = 'data:image/jpeg;base64,' + imageData;
-            _this.photoUrl = base64Image;
-            _this.photoAdded = true;
-        }, function (err) {
-            // Handle error
-        });
     };
     return Notes;
 }());
 Notes = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-notes',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/Notes/Notes.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-wrapper">\n    <textarea rows="5" type="text" placeholder="Describe notes" [(ngModel)]="note"></textarea>\n    <div class="camera-image" (click)="onCamera();"></div>\n    <br/>\n    <div *ngIf="photoAdded" class="photoAdded" [ngStyle]="{\'background-image\': \'url(\' + photoUrl + \')\'}"></div>\n  </div>\n\n\n  <button ion-button class="global-submit-button" (click)="onSubmit();">\n    Submit\n  </button>\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/Notes/Notes.html"*/
+        selector: 'page-notes',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/Notes/Notes.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Add Notes\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content no-bounce class="pageten1" style="">\n\n\n<div class="padspec7">\n	<div class="toptextholds">\n		<div class="placedirects">Add any information relevant to this job, which should be saved.</div>\n		<textarea placeholder="Write here.." class="notestexts"></textarea>\n	</div>\n</div>\n\n<div class="pad15">\n	<div class="photobutton1">\n		<img src="http://i.imgur.com/VIuctbn.png" style="">\n		<div class="textphotobt">Add Photos</div>\n	</div>\n</div>\n\n<div class="sendwraps1 notesa" style="">\n  <div class="buttonsub1s " (click)="onSubmit();">Save Notes</div>\n</div>\n\n\n\n\n\n\n</ion-content>\n\n\n\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/NewJob/Notes/Notes.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */]])
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], Notes);
 
 //# sourceMappingURL=Notes.js.map
 
 /***/ }),
 
-/***/ 241:
+/***/ 239:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -557,14 +504,13 @@ Spinner = __decorate([
 
 /***/ }),
 
-/***/ 242:
+/***/ 240:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CurrentJob; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_apiService__ = __webpack_require__(43);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -576,32 +522,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
 var CurrentJob = (function () {
-    function CurrentJob(navCtrl, navParams, apiService) {
+    function CurrentJob(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.apiService = apiService;
-        this.job_list = [];
     }
     CurrentJob.prototype.onCreateNewJob = function () {
     };
     CurrentJob.prototype.onCurrentJobReport = function () {
     };
     CurrentJob.prototype.onPrevious = function () {
-    };
-    CurrentJob.prototype.onJob = function (index) {
-        alert(index);
-    };
-    CurrentJob.prototype.ngOnInit = function () {
-        var _this = this;
-        var data = {};
-        this.apiService.post('/job/search', data, 'Loading...').subscribe(function (data) {
-            console.log('DATA', data);
-            _this.job_list = data.response;
-        }, function (error) {
-            console.log(error);
-        });
     };
     CurrentJob.prototype.onBack = function () {
         this.navCtrl.pop();
@@ -610,18 +540,17 @@ var CurrentJob = (function () {
 }());
 CurrentJob = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-currentjob',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/CurrentJob/CurrentJob.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-fixed">\n    <ion-label class="label">List of all entered jobs</ion-label>\n  </div>\n\n  <ion-scroll class="scroll-wrapper" scrollY="true">\n    <div class="weight-fixed" *ngFor="let item of job_list; let idIdx = index;" (click)="onJob(idIdx)">\n      <ion-label class="username-input">{{item.id}}</ion-label>\n    </div>\n  </ion-scroll>\n\n  <button ion-button class="global-submit-button">\n    Submit Current Report\n  </button>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/CurrentJob/CurrentJob.html"*/
+        selector: 'page-currentjob',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/CurrentJob/CurrentJob.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Current Job List\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content no-bounce class="pageten1">\n\n  <div class="mainjsets">\n<div style="padding:0px;">\n  <div class="setone4 juniques secondary">\n    <img src="http://i.imgur.com/siO683I.png">\n    <div class="topset1">View Jobs</div>\n    <div class="topset2">See list of jobs awaiting completion</div>\n  </div>\n</div>\n</div>\n\n\n\n<div class="pad15">\n	<div class="unitoflist1">\n		<div class="numsettings"></div>\n		<div class="maincontlist">\n			<div class="topcont01">\n				<div class="editcontain1">\n					<img src="http://i.imgur.com/usfKMdE.png" class="iconimg1">\n				</div>\n				<div class="firstunitleft">\n					<div class="fieldunittops">\n						<img src="http://i.imgur.com/kXQX121.png">\n						<div class="fieldtext1 first">Hillside Farms</div>\n					</div>\n\n					<div class="fieldunittops">\n						<img src="http://i.imgur.com/iz2rzyO.png">\n						<div class="fieldtext1 seconds">Jason Hilton</div>\n					</div>\n				</div>\n			</div>\n			<div class="tablethirds1">\n				<div class="thirdfirst1">\n					<div class="triotitle1">Date</div>\n					<div class="triodisplay1">08/20/17</div>\n				</div>\n				<div class="triosecond2">\n					<div class="triotitle1">Field</div>\n					<div class="triodisplay1">Joan Drive</div>\n				</div>\n				<div class="triothird3">\n					<div class="triotitle1">Applied Acres</div>\n					<div class="triodisplay1">24</div>\n				</div>\n			</div>\n		</div>\n	</div>\n\n	<div class="unitoflist1">\n		<div class="numsettings"></div>\n		<div class="maincontlist">\n			<div class="topcont01">\n				<div class="editcontain1">\n					<img src="http://i.imgur.com/usfKMdE.png" class="iconimg1">\n				</div>\n				<div class="firstunitleft">\n					<div class="fieldunittops">\n						<img src="http://i.imgur.com/kXQX121.png">\n						<div class="fieldtext1 first">Hillside Farms</div>\n					</div>\n\n					<div class="fieldunittops">\n						<img src="http://i.imgur.com/iz2rzyO.png">\n						<div class="fieldtext1 seconds">Jason Hilton</div>\n					</div>\n				</div>\n			</div>\n			<div class="tablethirds1">\n				<div class="thirdfirst1">\n					<div class="triotitle1">Date</div>\n					<div class="triodisplay1">08/20/17</div>\n				</div>\n				<div class="triosecond2">\n					<div class="triotitle1">Field</div>\n					<div class="triodisplay1">Joan Drive</div>\n				</div>\n				<div class="triothird3">\n					<div class="triotitle1">Applied Acres</div>\n					<div class="triodisplay1">24</div>\n				</div>\n			</div>\n		</div>\n	</div>\n\n</div>\n\n<div class="sendwraps1 notesa" style="">\n  <div class="buttonsub1s" (click)="onSubmit();">Submit Jobs</div>\n</div>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/CurrentJob/CurrentJob.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2__services_apiService__["a" /* ApiService */]])
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], CurrentJob);
 
 //# sourceMappingURL=CurrentJob.js.map
 
 /***/ }),
 
-/***/ 243:
+/***/ 241:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -657,7 +586,7 @@ var PreviousJob = (function () {
 }());
 PreviousJob = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-previousjob',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/PreviousJob/PreviousJob.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-wrapper">\n    <ion-label>List on Previous submitted Job Reports</ion-label>\n    <ion-label>with ability to view them</ion-label>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/PreviousJob/PreviousJob.html"*/
+        selector: 'page-previousjob',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/PreviousJob/PreviousJob.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Previous Reports\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content no-bounce class="pageten1">\n\n  <div class="mainjsets">\n<div style="padding:0px;">\n  <div class="setone4 juniques secondary">\n    <img src="http://i.imgur.com/siO683I.png">\n    <div class="topset1">View Submitted Jobs</div>\n    <div class="topset2">View history of completed jobs</div>\n  </div>\n</div>\n</div>\n\n\n\n<div class="pad15">\n	<div class="unitoflist1">\n		<div class="numsettings"></div>\n		<div class="maincontlist">\n			<div class="topcont01">\n				<div class="firstunitleft">\n					<div class="fieldunittops">\n						<img src="http://i.imgur.com/kXQX121.png">\n						<div class="fieldtext1 first">Hillside Farms</div>\n					</div>\n\n					<div class="fieldunittops">\n						<img src="http://i.imgur.com/iz2rzyO.png">\n						<div class="fieldtext1 seconds">Jason Hilton</div>\n					</div>\n				</div>\n			</div>\n			<div class="tablethirds1">\n				<div class="thirdfirst1">\n					<div class="triotitle1">Date</div>\n					<div class="triodisplay1">08/20/17</div>\n				</div>\n				<div class="triosecond2">\n					<div class="triotitle1">Field</div>\n					<div class="triodisplay1">Joan Drive</div>\n				</div>\n				<div class="triothird3">\n					<div class="triotitle1">Applied Acres</div>\n					<div class="triodisplay1">24</div>\n				</div>\n			</div>\n		</div>\n	</div>\n\n	<div class="unitoflist1">\n		<div class="numsettings"></div>\n		<div class="maincontlist">\n			<div class="topcont01">\n				<div class="firstunitleft">\n					<div class="fieldunittops">\n						<img src="http://i.imgur.com/kXQX121.png">\n						<div class="fieldtext1 first">Hillside Farms</div>\n					</div>\n\n					<div class="fieldunittops">\n						<img src="http://i.imgur.com/iz2rzyO.png">\n						<div class="fieldtext1 seconds">Jason Hilton</div>\n					</div>\n				</div>\n			</div>\n			<div class="tablethirds1">\n				<div class="thirdfirst1">\n					<div class="triotitle1">Date</div>\n					<div class="triodisplay1">08/20/17</div>\n				</div>\n				<div class="triosecond2">\n					<div class="triotitle1">Field</div>\n					<div class="triodisplay1">Joan Drive</div>\n				</div>\n				<div class="triothird3">\n					<div class="triotitle1">Applied Acres</div>\n					<div class="triodisplay1">24</div>\n				</div>\n			</div>\n		</div>\n	</div>\n\n</div>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/ApplicationLogScreen/PreviousJob/PreviousJob.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -667,15 +596,14 @@ PreviousJob = __decorate([
 
 /***/ }),
 
-/***/ 244:
+/***/ 242:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EquipmentLogScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__EquipmentSelectedScreen_EquipmentSelectedScreen__ = __webpack_require__(245);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_apiService__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__EquipmentSelectedScreen_EquipmentSelectedScreen__ = __webpack_require__(243);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -688,58 +616,42 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var EquipmentLogScreen = (function () {
-    function EquipmentLogScreen(navCtrl, navParams, apiService) {
+    function EquipmentLogScreen(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.apiService = apiService;
-        this.job_list = [];
     }
     EquipmentLogScreen.prototype.onBack = function () {
         this.navCtrl.pop();
     };
-    EquipmentLogScreen.prototype.onJob = function (index) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__EquipmentSelectedScreen_EquipmentSelectedScreen__["a" /* EquipmentSelectedScreen */], {
-            index: this.job_list[index].id
-        });
-    };
-    EquipmentLogScreen.prototype.ngOnInit = function () {
-        var _this = this;
-        var data = {};
-        this.apiService.post('/job/search', data, 'Loading...').subscribe(function (data) {
-            console.log('DATA', data);
-            _this.job_list = data.response;
-        }, function (error) {
-            console.log(error);
-        });
+    EquipmentLogScreen.prototype.onSelect = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__EquipmentSelectedScreen_EquipmentSelectedScreen__["a" /* EquipmentSelectedScreen */]);
     };
     return EquipmentLogScreen;
 }());
 EquipmentLogScreen = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-equipmentlogscreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentLogScreen.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-wrapper">\n    <ion-label>Select Equipment</ion-label>\n  </div>\n\n  <ion-scroll class="scroll-wrapper" scrollY="true">\n    <div class="weight-fixed" *ngFor="let item of job_list; let idIdx = index;" (click)="onJob(idIdx)">\n      <ion-label class="username-input">{{item.id}}</ion-label>\n    </div>\n  </ion-scroll>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentLogScreen.html"*/
+        selector: 'page-equipmentlogscreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentLogScreen.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Equipment\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-bounce class="pageten2" style="">\n\n  <div class="mainjsets bgwhite">\n<div style="padding:0px;">\n  <div class="setone4 juniques secondary">\n    <img class="two" src="http://i.imgur.com/8yvvGXk.png">\n    <div class="topset1">Assigned Equipment</div>\n    <div class="topset2">Below are the equipment assigned to you</div>\n  </div>\n</div>\n</div>\n\n\n\n<div class="pad15">\n	\n\n\n	<div class="equipitems" (click)="onSelect();">\n		<div class="toolnametitle">Tool Name</div>\n		<div class="toolactualname">Farm Cutting Blade</div>\n		<div class="toolsmallnote">This tool is in your possesion</div>\n	</div>\n\n	<div class="equipitems" (click)="onSelect();">\n		<div class="toolnametitle">Tool Name</div>\n		<div class="toolactualname">Farm Cutting Blade</div>\n		<div class="toolsmallnote">This tool is in your possesion</div>\n	</div>\n\n	<div class="equipitems" (click)="onSelect();">\n		<div class="toolnametitle">Tool Name</div>\n		<div class="toolactualname">Farm Cutting Blade</div>\n		<div class="toolsmallnote">This tool is in your possesion</div>\n	</div>\n\n</div>\n\n\n\n</ion-content>\n\n\n\n\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentLogScreen.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_3__services_apiService__["a" /* ApiService */]])
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], EquipmentLogScreen);
 
 //# sourceMappingURL=EquipmentLogScreen.js.map
 
 /***/ }),
 
-/***/ 245:
+/***/ 243:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EquipmentSelectedScreen; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LogHours_LogHours__ = __webpack_require__(246);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__RoutineMaintenance_RoutineMaintenance__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ScheduledMaintenance_ScheduledMaintenance__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Repairs_Repairs__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LogHours_LogHours__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__RoutineMaintenance_RoutineMaintenance__ = __webpack_require__(245);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ScheduledMaintenance_ScheduledMaintenance__ = __webpack_require__(249);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Repairs_Repairs__ = __webpack_require__(251);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -759,15 +671,12 @@ var EquipmentSelectedScreen = (function () {
     function EquipmentSelectedScreen(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.index = this.navParams.get("index");
     }
     EquipmentSelectedScreen.prototype.onBack = function () {
         this.navCtrl.pop();
     };
     EquipmentSelectedScreen.prototype.onLogHours = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__LogHours_LogHours__["a" /* LogHours */], {
-            index: this.index
-        });
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__LogHours_LogHours__["a" /* LogHours */]);
     };
     EquipmentSelectedScreen.prototype.onRoutineMaintenance = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__RoutineMaintenance_RoutineMaintenance__["a" /* RoutineMaintenance */]);
@@ -782,7 +691,7 @@ var EquipmentSelectedScreen = (function () {
 }());
 EquipmentSelectedScreen = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-equipmentselectedscreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/EquipmentSelectedScreen.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onLogHours()">Log Hours</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onRoutineMaintenance()">Routine Maintenance</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onScheduledMaint()">Scheduled Maintenance</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onRepairs()">Repairs</button>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/EquipmentSelectedScreen.html"*/
+        selector: 'page-equipmentselectedscreen',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/EquipmentSelectedScreen.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Equipment Details\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-bounce class="pageten2" style="">\n\n\n<div class="mainjsets bgwhite">\n<div style="padding:0px;">\n  <div class="setone4 juniques secondary">\n    <img class="two" src="http://i.imgur.com/8yvvGXk.png">\n    <div class="topset1">Equipment Actions</div>\n    <div class="topset2">Perform a wide array of equipment managing functions</div>\n  </div>\n</div>\n</div>\n\n\n\n<div class="pad15" style="padding-top:25px;padding-bottom:0px;">\n  <div class="specsmalls spec121">Actions</div>\n</div>\n\n\n\n<div class="pad15">\n  <div class="equipfour" (click)="onLogHours()"><img src="http://i.imgur.com/bZjgxNG.png">Log Hours</div>\n  <div class="equipfour" (click)="onRoutineMaintenance()"><img src="http://i.imgur.com/9jbPues.png">Routine Maintenance</div>\n  <div class="equipfour" (click)="onScheduledMaint()"><img src="http://i.imgur.com/zWsydmQ.png">Scheduled Maintenance</div>\n  <div class="equipfour" (click)="onRepairs()"><img src="http://i.imgur.com/PTHrOsU.png">Repairs</div>\n</div>\n\n\n\n\n</ion-content>\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/EquipmentSelectedScreen.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -792,14 +701,14 @@ EquipmentSelectedScreen = __decorate([
 
 /***/ }),
 
-/***/ 246:
+/***/ 244:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogHours; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_apiService__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_apiService__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -817,29 +726,14 @@ var LogHours = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.apiService = apiService;
-        this.job_list = [];
-        this.index = this.navParams.get("index");
-        this.myHour = 0;
     }
     LogHours.prototype.onBack = function () {
         this.navCtrl.pop();
     };
-    LogHours.prototype.ngOnInit = function () {
-        var _this = this;
-        var data = {};
-        this.apiService.post('/equip/search', data, 'Logging...').subscribe(function (data) {
-            console.log('DATA', data);
-            _this.job_list = data.response;
-        }, function (error) {
-            console.log(error);
-        });
-    };
     LogHours.prototype.onSubmit = function () {
         var _this = this;
         var data = {
-            id: this.index,
-            date: this.myDate,
-            hour: this.myHour
+            data: "test"
         };
         this.apiService.post('/equip/log', data, 'Logging...').subscribe(function (data) {
             console.log('DATA', data);
@@ -852,7 +746,7 @@ var LogHours = (function () {
 }());
 LogHours = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-loghours',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/LogHours/LogHours.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-fixed">\n    <ion-item>\n      <ion-label>Date</ion-label>\n      <ion-datetime class="date-picker" [(ngModel)]="myDate"></ion-datetime>\n    </ion-item>\n    <ion-item>\n      <ion-label>Enter Current Hours</ion-label>\n      <ion-input class="username-input" [(ngModel)]="myHour"></ion-input>\n    </ion-item>\n  </div>\n\n  <div class="weight-wrapper">\n    <ion-label>List of previously submitted hours</ion-label>\n  </div>\n\n  <ion-scroll class="scroll-wrapper" scrollY="true">\n    <div class="weight-fixed" *ngFor="let item of job_list; let idIdx = index;">\n      <ion-item>\n        <ion-label>{{item.Date}}</ion-label>\n        <ion-label>{{item.Hour}}</ion-label>\n      </ion-item>\n    </div>\n  </ion-scroll>\n\n\n  <button ion-button class="global-submit-button" (click)="onSubmit();">\n    Submit\n  </button>\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/LogHours/LogHours.html"*/
+        selector: 'page-loghours',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/LogHours/LogHours.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Log Hours\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-bounce class="pageten2" style="">\n\n\n<div class="pad15">\n<div class="specpad76">\n  <div class="weight-fixeds">\n    <div class="enterinfo1">Enter Information</div>\n    <ion-input placeholder="Date" style="" class="username-input mgb12"></ion-input>\n  </div>\n\n  <div class="weight-fixeds">\n    <ion-input placeholder="Hours" class="username-input" type="password"></ion-input>\n  </div>\n\n  <div class="weight-wrappers mgt20" style="">\n    <button ion-button class="login-btn button04" (click)="onLogin();">Submit Hours</button>\n  </div>\n</div>\n</div>\n\n\n\n\n\n<div class="pad15 padtop0"> \n  <div class="bshad2" style="">\n\n    <div class="bgsome1">\n      <div class="loghist123">Log History</div>\n    \n    <div class="tableset8">\n      <div class="widthhalf">\n        <div class="padleftonly">Date</div>\n      </div>\n      <div class="widthhalf">\n        <div class="padleftonly">Hours</div>\n      </div>\n    </div>\n\n    </div>\n\n    <div class="logunit2">\n      <div class="widthhalf"><div class="padunit04">08/26/2017</div></div>\n      <div class="widthhalf"><div class="padunit04">7</div></div>\n    </div>\n\n    <div class="logunit2">\n      <div class="widthhalf"><div class="padunit04">08/26/2017</div></div>\n      <div class="widthhalf"><div class="padunit04">7</div></div>\n    </div>\n\n    <div class="logunit2">\n      <div class="widthhalf"><div class="padunit04">08/26/2017</div></div>\n      <div class="widthhalf"><div class="padunit04">7</div></div>\n    </div>\n\n  </div>\n</div>\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/LogHours/LogHours.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -863,16 +757,16 @@ LogHours = __decorate([
 
 /***/ }),
 
-/***/ 247:
+/***/ 245:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RoutineMaintenance; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__MachineWash_MachineWash__ = __webpack_require__(248);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Grease_Grease__ = __webpack_require__(249);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__OtherRoutine_OtherRoutine__ = __webpack_require__(250);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__MachineWash_MachineWash__ = __webpack_require__(246);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Grease_Grease__ = __webpack_require__(247);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__OtherRoutine_OtherRoutine__ = __webpack_require__(248);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -908,7 +802,7 @@ var RoutineMaintenance = (function () {
 }());
 RoutineMaintenance = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-routinemaintenance',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/RoutineMaintenance.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onMachineWash()">Machine Wash</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onGrease()">Grease</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onOtherRoutine()">Other Routine Maint.</button>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/RoutineMaintenance.html"*/
+        selector: 'page-routinemaintenance',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/RoutineMaintenance.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Routine Maintenance\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-bounce class="pageten2" style="">\n\n\n<div class="mainjsets bgwhite">\n<div style="padding:0px;">\n  <div class="setone4 juniques secondary">\n    <img class="two" src="http://i.imgur.com/8yvvGXk.png">\n    <div class="topset1">Maintenance Type</div>\n    <div class="topset2">Select the type of maintenance performed</div>\n  </div>\n</div>\n</div>\n\n\n\n<div class="pad15" style="padding-top:25px;padding-bottom:0px;">\n  <div class="specsmalls spec121">Actions</div>\n</div>\n\n\n\n<div class="pad15">\n  <div class="equipfour" (click)="onMachineWash()"><img src="http://i.imgur.com/1x6qMWZ.png">Machine Wash</div>\n  <div class="equipfour" (click)="onGrease()"><img src="http://i.imgur.com/4qJxnSA.png">Grease</div>\n  <div class="equipfour"><img src="http://i.imgur.com/zv0krOH.png">Cab Clean</div>\n  <div class="equipfour"><img src="http://i.imgur.com/2IFlti2.png">Chain Oiled</div>\n  <div class="equipfour"><img src="http://i.imgur.com/snPGMFa.png">Chain Tension</div>\n  <div class="equipfour" (click)="onOtherRoutine()"><img src="http://i.imgur.com/CQUHdJa.png">Other</div>\n</div>\n\n\n\n\n</ion-content>\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/RoutineMaintenance.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -918,7 +812,7 @@ RoutineMaintenance = __decorate([
 
 /***/ }),
 
-/***/ 248:
+/***/ 246:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -950,7 +844,7 @@ var MachineWash = (function () {
 }());
 MachineWash = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-machinewash',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/MachineWash/MachineWash.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-fixed">\n    <ion-label>Date</ion-label>\n    <ion-input class="username-input"></ion-input>\n  </div>\n\n  <div class="weight-fixed">\n    <ion-label>Hours</ion-label>\n    <ion-input class="username-input"></ion-input>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/MachineWash/MachineWash.html"*/
+        selector: 'page-machinewash',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/MachineWash/MachineWash.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Machine Wash\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-bounce class="pageten2" style="">\n\n\n<div class="pad15">\n<div class="specpad76">\n  <div class="weight-fixeds">\n    <div class="enterinfo1">Maintenance Information</div>\n    <ion-input placeholder="Date" style="" class="username-input mgb12"></ion-input>\n  </div>\n\n  <div class="weight-fixeds">\n    <ion-input placeholder="Hours" class="username-input" type="password"></ion-input>\n  </div>\n\n  <div class="checkboxcont">\n    <ion-item>\n      <ion-label>High Pressure</ion-label>\n      <ion-checkbox color="dark"></ion-checkbox>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>High Volume</ion-label>\n      <ion-checkbox color="dark"></ion-checkbox>\n    </ion-item>\n  </div>\n\n  <div class="weight-wrappers mgt20" style="">\n    <button ion-button class="login-btn button04" (click)="onLogin();">Submit</button>\n  </div>\n</div>\n</div>\n\n\n\n\n\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/MachineWash/MachineWash.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -960,7 +854,7 @@ MachineWash = __decorate([
 
 /***/ }),
 
-/***/ 249:
+/***/ 247:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -995,7 +889,7 @@ var Grease = (function () {
 }());
 Grease = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-grease',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/Grease/Grease.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-fixed">\n    <ion-label>Date</ion-label>\n    <ion-input class="username-input"></ion-input>\n  </div>\n\n  <div class="weight-fixed">\n    <ion-label>Hours</ion-label>\n    <ion-input class="username-input"></ion-input>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/Grease/Grease.html"*/
+        selector: 'page-grease',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/Grease/Grease.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Grease\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-bounce class="pageten2" style="">\n\n\n<div class="pad15">\n<div class="specpad76">\n  <div class="weight-fixeds">\n    <div class="enterinfo1">Maintenance Information</div>\n    <ion-input placeholder="Date" style="" class="username-input mgb12"></ion-input>\n  </div>\n\n  <div class="weight-fixeds">\n    <ion-input placeholder="Hours" class="username-input" type="password"></ion-input>\n  </div>\n\n  <div class="checkboxcont">\n    <ion-item>\n      <ion-label>Bed</ion-label>\n      <ion-checkbox color="dark"></ion-checkbox>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Chassis</ion-label>\n      <ion-checkbox color="dark"></ion-checkbox>\n    </ion-item>\n  </div>\n\n  <div class="weight-wrappers mgt20" style="">\n    <button ion-button class="login-btn button04" (click)="onLogin();">Submit</button>\n  </div>\n</div>\n</div>\n\n\n\n\n\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/Grease/Grease.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -1005,7 +899,7 @@ Grease = __decorate([
 
 /***/ }),
 
-/***/ 250:
+/***/ 248:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1037,7 +931,7 @@ var OtherRoutine = (function () {
 }());
 OtherRoutine = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-otherroutine',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/OtherRoutine/OtherRoutine.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-fixed">\n    <ion-label>Date</ion-label>\n    <ion-input class="username-input"></ion-input>\n  </div>\n\n  <div class="weight-fixed">\n    <ion-label>Hours</ion-label>\n    <ion-input class="username-input"></ion-input>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/OtherRoutine/OtherRoutine.html"*/
+        selector: 'page-otherroutine',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/OtherRoutine/OtherRoutine.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Other Maintenance\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-bounce class="pageten2" style="">\n\n\n<div class="pad15">\n<div class="specpad76">\n  <div class="weight-fixeds">\n    <div class="enterinfo1">Maintenance Information</div>\n    <ion-input placeholder="Date" style="" class="username-input mgb12"></ion-input>\n  </div>\n\n  <div class="weight-fixeds">\n    <ion-input placeholder="Hours" class="username-input" type="password"></ion-input>\n  </div>\n\n  <div>\n    <textarea class="tarea012" placeholder="Description of maintenance performed"></textarea>\n  </div>\n\n  <div class="checkboxcont">\n    <ion-item>\n      <ion-label>Set Reminder</ion-label>\n      <ion-checkbox color="dark"></ion-checkbox>\n    </ion-item>\n\n  \n  </div>\n\n  <div class="weight-wrappers mgt20" style="">\n    <button ion-button class="login-btn button04" (click)="onLogin();">Submit</button>\n  </div>\n</div>\n</div>\n\n\n\n\n\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/OtherRoutine/OtherRoutine.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -1047,14 +941,14 @@ OtherRoutine = __decorate([
 
 /***/ }),
 
-/***/ 251:
+/***/ 249:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScheduledMaintenance; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NewSchedule_NewSchedule__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NewSchedule_NewSchedule__ = __webpack_require__(250);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1082,7 +976,7 @@ var ScheduledMaintenance = (function () {
 }());
 ScheduledMaintenance = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-scheduledmaintenance',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/ScheduledMaintenance/ScheduledMaintenance.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn" (click)="onNewSchedule();">Set-up New Scheduled Maintenance</button>\n  </div>\n\n  <div class="weight-wrapper">\n    <button ion-button class="login-btn">View Currently Scheduled Maint.</button>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/ScheduledMaintenance/ScheduledMaintenance.html"*/
+        selector: 'page-scheduledmaintenance',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/ScheduledMaintenance/ScheduledMaintenance.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Scheduled Maintenance\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-bounce class="pageten2" style="">\n\n\n<div class="mainjsets bgwhite">\n<div style="padding:0px;">\n  <div class="setone4 juniques secondary">\n    <img class="two" src="http://i.imgur.com/8yvvGXk.png">\n    <div class="topset1">Setup Maintenance</div>\n    <div class="topset2">Schedule and view maintenances</div>\n  </div>\n</div>\n</div>\n\n\n\n<div class="pad15" style="padding-top:25px;padding-bottom:0px;">\n  <div class="specsmalls spec121">Actions</div>\n</div>\n\n\n\n<div class="pad15">\n  <div class="equipfour padr30" (click)="onNewSchedule();"><img src="http://i.imgur.com/bS1POdT.png">Set-up New Scheduled Maintenance</div>\n  <div class="equipfour padr30"><img src="http://i.imgur.com/SxZyv4q.png">View Currently Scheduled Maintainences</div>\n\n</div>\n\n\n</ion-content>\n\n\n\n\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/ScheduledMaintenance/ScheduledMaintenance.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -1092,7 +986,7 @@ ScheduledMaintenance = __decorate([
 
 /***/ }),
 
-/***/ 252:
+/***/ 250:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1125,7 +1019,7 @@ var NewSchedule = (function () {
 }());
 NewSchedule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-newschedule',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/ScheduledMaintenance/NewSchedule/NewSchedule.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-wrapper">\n    <ion-label>Select Last Serviced Date(Optionals)</ion-label>\n  </div>\n\n  <div class="weight-wrapper">\n    <ion-label>Select Last Serviced Hours</ion-label>\n  </div>\n\n  <div class="weight-wrapper">\n    <ion-label>Select Hours for Next Service</ion-label>\n  </div>\n\n  <button ion-button class="global-submit-button" (click)="onSubmit();">\n    Submit\n  </button>\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/ScheduledMaintenance/NewSchedule/NewSchedule.html"*/
+        selector: 'page-newschedule',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/ScheduledMaintenance/NewSchedule/NewSchedule.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Setup Maintenance\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-bounce class="pageten2" style="">\n\n\n<div class="pad15">\n<div class="specpad76">\n  <div class="weight-fixeds">\n    <div class="enterinfo1">Schedule Maintenance</div>\n\n  <div class="checkboxcont setbt20s">\n    <ion-item>\n      <ion-label>Oil Change</ion-label>\n      <ion-checkbox color="dark"></ion-checkbox>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Air Filter</ion-label>\n      <ion-checkbox color="dark"></ion-checkbox>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Hydraulic Filters</ion-label>\n      <ion-checkbox color="dark"></ion-checkbox>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Fuel Filters</ion-label>\n      <ion-checkbox color="dark"></ion-checkbox>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Others</ion-label>\n      <ion-checkbox color="dark"></ion-checkbox>\n    </ion-item>\n  </div>\n\n\n    <ion-input placeholder="Services On Date" style="" class="username-input mgb12"></ion-input>\n  </div>\n\n  <div class="weight-fixeds">\n    <ion-input placeholder="Hours" class="username-input setbt20s" type="text"></ion-input>\n  </div>\n\n  <div class="weight-fixeds">\n    <ion-input placeholder="Next Date" style="" class="username-input mgb12"></ion-input>\n  </div>\n\n  <div class="weight-fixeds">\n    <ion-input placeholder="Hours" class="username-input" type="password"></ion-input>\n  </div>\n\n\n  <div class="weight-wrappers mgt20" style="">\n    <button ion-button class="login-btn button04" (click)="onLogin();">Submit</button>\n  </div>\n</div>\n</div>\n\n\n\n\n\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/ScheduledMaintenance/NewSchedule/NewSchedule.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -1135,7 +1029,7 @@ NewSchedule = __decorate([
 
 /***/ }),
 
-/***/ 253:
+/***/ 251:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1168,7 +1062,7 @@ var Repairs = (function () {
 }());
 Repairs = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-repairs',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/Repairs/Repairs.html"*/'<ion-content padding>\n\n  <div class="iconback-global" (click)="onBack();"></div>\n\n  <div class="back-padding-vertical-mini"></div>\n\n  <div class="weight-wrapper">\n    <ion-label>Repairs needed</ion-label>\n  </div>\n\n  <button ion-button class="global-submit-button" (click)="onSubmit();">\n    Submit\n  </button>\n</ion-content>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/Repairs/Repairs.html"*/
+        selector: 'page-repairs',template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/Repairs/Repairs.html"*/'<ion-header style="">\n  <ion-navbar>\n    <ion-title>\n      Repairs\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-bounce class="pageten2" style="">\n\n\n<div class="mainjsets bgwhite">\n<div style="padding:0px;">\n  <div class="setone4 juniques secondary">\n    <img class="two" src="http://i.imgur.com/8yvvGXk.png">\n    <div class="topset1">Rapair Management</div>\n    <div class="topset2">View and manage neccessary repairs</div>\n  </div>\n</div>\n</div>\n\n\n\n<div class="pad15" style="padding-top:25px;padding-bottom:0px;">\n  <div class="specsmalls spec121">Actions</div>\n</div>\n\n\n\n<div class="pad15">\n  <div class="equipfour"><img src="http://i.imgur.com/FKsA27O.png">Repair Performed</div>\n  <div class="equipfour"><img src="http://i.imgur.com/Z7BVo63.png">Repair Needed</div>\n</div>\n\n\n\n<!-- This is Repair Performed -->\n\n<div class="pad15 padbottom0">\n<div class="specpad76">\n  <div class="weight-fixeds">\n    <div class="enterinfo1">Repair Performed Info</div>\n    <ion-input placeholder="Date" style="" class="username-input mgb12"></ion-input>\n  </div>\n\n  <div class="weight-fixeds">\n    <ion-input placeholder="Hours" class="username-input setbt20s" type="text"></ion-input>\n  </div>\n\n  <div class="weight-fixeds">\n    <ion-input placeholder="Repaired By" class="username-input" type="text"></ion-input>\n  </div>\n\n</div>\n</div>\n\n\n<div class="padspec7">\n  <div class="toptextholds">\n    <div class="placedirects">Add any information relevant to this job, which should be saved.</div>\n    <textarea placeholder="Write here.." class="notestexts doone"></textarea>\n  </div>\n</div>\n\n<div class="pad15 padbottom0">\n  <div class="photobutton1">\n    <img src="http://i.imgur.com/VIuctbn.png" style="">\n    <div class="textphotobt">Add Photos</div>\n  </div>\n</div>\n\n<div class="pad15">\n  <button ion-button class="login-btn button04" (click)="onLogin();">Submit</button>\n</div>\n\n\n\n</ion-content>\n\n\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/pages/EquipmentLogScreen/EquipmentSelectedScreen/Repairs/Repairs.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
@@ -1178,13 +1072,13 @@ Repairs = __decorate([
 
 /***/ }),
 
-/***/ 408:
+/***/ 406:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(409);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(413);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(411);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1192,7 +1086,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 413:
+/***/ 411:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1200,43 +1094,37 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(456);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_IntroScreen_IntroScreen__ = __webpack_require__(233);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_LoginScreen_LoginScreen__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_LoginDoneScreen_LoginDoneScreen__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_ApplicationLogScreen_ApplicationLogScreen__ = __webpack_require__(235);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_EquipmentLogScreen_EquipmentLogScreen__ = __webpack_require__(244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_EquipmentLogScreen_EquipmentSelectedScreen_EquipmentSelectedScreen__ = __webpack_require__(245);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_EquipmentLogScreen_EquipmentSelectedScreen_LogHours_LogHours__ = __webpack_require__(246);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_RoutineMaintenance__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_ApplicationLogScreen_NewJob_NewJob__ = __webpack_require__(236);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_ApplicationLogScreen_CurrentJob_CurrentJob__ = __webpack_require__(242);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_ApplicationLogScreen_PreviousJob_PreviousJob__ = __webpack_require__(243);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_EquipmentLogScreen_EquipmentSelectedScreen_ScheduledMaintenance_ScheduledMaintenance__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_EquipmentLogScreen_EquipmentSelectedScreen_ScheduledMaintenance_NewSchedule_NewSchedule__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_EquipmentLogScreen_EquipmentSelectedScreen_Repairs_Repairs__ = __webpack_require__(253);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_ApplicationLogScreen_NewJob_Notes_Notes__ = __webpack_require__(237);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_MachineWash_MachineWash__ = __webpack_require__(248);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_Grease_Grease__ = __webpack_require__(249);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_OtherRoutine_OtherRoutine__ = __webpack_require__(250);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_apiService__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_spinnerService__ = __webpack_require__(241);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_AppSplashScreen_AppSplashScreen__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__ionic_native_camera__ = __webpack_require__(238);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_ionic_native__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__services_singletoneService__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(454);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_IntroScreen_IntroScreen__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_LoginScreen_LoginScreen__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_LoginDoneScreen_LoginDoneScreen__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_ApplicationLogScreen_ApplicationLogScreen__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_EquipmentLogScreen_EquipmentLogScreen__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_EquipmentLogScreen_EquipmentSelectedScreen_EquipmentSelectedScreen__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_EquipmentLogScreen_EquipmentSelectedScreen_LogHours_LogHours__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_RoutineMaintenance__ = __webpack_require__(245);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_ApplicationLogScreen_NewJob_NewJob__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_ApplicationLogScreen_CurrentJob_CurrentJob__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_ApplicationLogScreen_PreviousJob_PreviousJob__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_EquipmentLogScreen_EquipmentSelectedScreen_ScheduledMaintenance_ScheduledMaintenance__ = __webpack_require__(249);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_EquipmentLogScreen_EquipmentSelectedScreen_ScheduledMaintenance_NewSchedule_NewSchedule__ = __webpack_require__(250);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_EquipmentLogScreen_EquipmentSelectedScreen_Repairs_Repairs__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_ApplicationLogScreen_NewJob_Notes_Notes__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_MachineWash_MachineWash__ = __webpack_require__(246);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_Grease_Grease__ = __webpack_require__(247);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_EquipmentLogScreen_EquipmentSelectedScreen_RoutineMaintenance_OtherRoutine_OtherRoutine__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_apiService__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_spinnerService__ = __webpack_require__(239);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_AppSplashScreen_AppSplashScreen__ = __webpack_require__(231);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
 
 
 
@@ -1327,9 +1215,6 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
             __WEBPACK_IMPORTED_MODULE_25__services_apiService__["a" /* ApiService */],
             __WEBPACK_IMPORTED_MODULE_26__services_spinnerService__["a" /* Spinner */],
-            __WEBPACK_IMPORTED_MODULE_28__ionic_native_camera__["a" /* Camera */],
-            __WEBPACK_IMPORTED_MODULE_29_ionic_native__["a" /* NativeStorage */],
-            __WEBPACK_IMPORTED_MODULE_30__services_singletoneService__["a" /* SingletonService */],
             { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
         ]
     })
@@ -1339,20 +1224,70 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 43:
+/***/ 454:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_AppSplashScreen_AppSplashScreen__ = __webpack_require__(231);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var MyApp = (function () {
+    function MyApp(platform, statusBar, splashScreen) {
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_AppSplashScreen_AppSplashScreen__["a" /* AppSplashScreen */];
+        platform.ready().then(function () {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            statusBar.styleDefault();
+            splashScreen.hide();
+        });
+    }
+    return MyApp;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
+], MyApp.prototype, "nav", void 0);
+MyApp = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/app/app.html"*/'<ion-nav [root]="rootPage" swipeBackEnabled="false"></ion-nav>\n<link href="https://fonts.googleapis.com/css?family=Saira:300,400,500,600,700" rel="stylesheet">\n<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/app/app.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+], MyApp);
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 51:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApiService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(239);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(237);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(238);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__spinnerService__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__spinnerService__ = __webpack_require__(239);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1368,8 +1303,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-// const API_BASEURL = 'http://dan.wolodeploy.com/public';
-var API_BASEURL = 'http://172.20.11.60/Brooks/public';
+var API_BASEURL = 'http://dan.wolodeploy.com/public';
+// const API_BASEURL = 'http://172.20.11.60/Brooks/public';
 var ApiService = (function () {
     function ApiService(http, spinner) {
         this.http = http;
@@ -1476,84 +1411,7 @@ ApiService = __decorate([
 
 //# sourceMappingURL=apiService.js.map
 
-/***/ }),
-
-/***/ 456:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_AppSplashScreen_AppSplashScreen__ = __webpack_require__(232);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var MyApp = (function () {
-    function MyApp(platform, statusBar, splashScreen) {
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_AppSplashScreen_AppSplashScreen__["a" /* AppSplashScreen */];
-        platform.ready().then(function () {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
-            statusBar.styleDefault();
-            splashScreen.hide();
-        });
-    }
-    return MyApp;
-}());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
-], MyApp.prototype, "nav", void 0);
-MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/app/app.html"*/'<ion-nav [root]="rootPage" swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"/Volumes/MACDATA/Work/NewProjects/Cross/2017.8/Brooks/BrooksIonic2/src/app/app.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
-], MyApp);
-
-//# sourceMappingURL=app.component.js.map
-
-/***/ }),
-
-/***/ 52:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SingletonService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var SingletonService = (function () {
-    function SingletonService() {
-        this.loginUser = "";
-    }
-    return SingletonService;
-}());
-SingletonService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()
-], SingletonService);
-
-//# sourceMappingURL=singletoneService.js.map
-
 /***/ })
 
-},[408]);
+},[406]);
 //# sourceMappingURL=main.js.map

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams} from 'ionic-angular';
 import {Notes} from "./Notes/Notes";
 import {ApiService} from "../../../services/apiService";
-import {SingletonService} from "../../../services/singletoneService";
 
 @Component({
   selector: 'page-newjob',
@@ -17,13 +16,10 @@ export class NewJob {
   AppType: string;
   EquipID: string;
   Acres: string;
-  note: string;
-  imageUrl = null;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public apiService: ApiService,
-    public singletonService: SingletonService
+    public apiService: ApiService
   ) {
     this.Date = "";
     this.Grower = "";
@@ -32,7 +28,6 @@ export class NewJob {
     this.AppType = "";
     this.EquipID = "";
     this.Acres = "";
-    this.note = "";
   }
 
   onCreateNewJob() {
@@ -51,25 +46,18 @@ export class NewJob {
   }
 
   onNotes() {
-    this.navCtrl.push(Notes, { parent: this });
-  }
-
-  setNotes(str) {
-    this.note = str;
+    this.navCtrl.push(Notes);
   }
 
   onSubmit() {
     let data = {
-      User: this.singletonService.loginUser,
       Date: this.Date,
       Grower: this.Grower,
       FarmName: this.FarmName,
       FieldName: this.FieldName,
       AppType: this.AppType,
       EquipID: this.EquipID,
-      Acres: this.Acres,
-      note: this.note,
-      imageUrl: ""
+      Acres: this.Acres
     };
     this.apiService.post('/job/create', data, 'Creating Job...').subscribe(
       data => {

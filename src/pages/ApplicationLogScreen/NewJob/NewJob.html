@@ -1,11 +1,72 @@
-<ion-content padding>
+<ion-header>
+  <ion-navbar>
+    <ion-buttons (click)="goback();" style="position: absolute;color:white;">
+    </ion-buttons>
+    <ion-title style="text-align:center">
+      Create New Job
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 
-  <div class="iconback-global" (click)="onBack();"></div>
 
-  <div class="back-padding-vertical-mini"></div>
+<ion-content class="pageten1" style="">
 
-  <ion-scroll class="scroll-wrapper" scrollY="true">
+  <div class="mainjsets">
+<div style="padding:0px;">
+  <div class="setone4 juniques secondary">
+    <img src="http://i.imgur.com/OYt16qG.png">
+    <div class="topset1">Add Job</div>
+    <div class="topset2">Add a new task in your application log</div>
+  </div>
+</div>
+</div>
 
+
+
+
+
+
+
+<div class="titleunits1">
+  Please fill the following fields
+</div>
+
+<div style="padding:15px;">
+  <ion-input class="inputsten" type="text" placeholder="Date" [(ngModel)]="Date"></ion-input>
+  <ion-input class="inputsten" type="text" placeholder="Grower" [(ngModel)]="Grower"></ion-input>
+  <ion-input class="inputsten" type="text" placeholder="Farm Name" [(ngModel)]="FarmName"></ion-input>
+  <ion-input class="inputsten" type="text" placeholder="Field name" [(ngModel)]="FieldName"></ion-input>
+
+
+
+  <ion-list class="projdrops1">
+  <ion-item>
+    <ion-label style="color:#919394;">Application Type</ion-label>
+    <ion-select [(ngModel)]="AppType">
+      <ion-option value="nes">Flat Rate Fertilizer</ion-option>
+      <ion-option value="n64">Variable Rate Fertilizer</ion-option>
+      <ion-option value="ps">Flat Rate Lime</ion-option>
+      <ion-option value="genesis">Variable Rate Lime</ion-option>
+      <ion-option value="saturn">Other (please explain)</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+
+
+  <ion-input class="inputsten" type="text" placeholder="Equipment ID" [(ngModel)]="EquipID"></ion-input>
+  <ion-input class="inputsten" type="text" placeholder="Applied Acres" [(ngModel)]="Acres"></ion-input>
+
+  <div class="buttonnotes" (click)="onNotes();"><img src="http://i.imgur.com/pYFWoEW.png">Add Notes</div>
+</div>
+
+<div class="sendwraps1">
+  <div class="buttonsub1s" (click)="onSubmit();">Submit New Job</div>
+</div>
+
+
+
+<div style="display:none;">
     <div class="weight-fixed">
       <ion-label>Date</ion-label>
       <ion-input class="username-input" [(ngModel)]="Date"></ion-input>
@@ -50,7 +111,14 @@
         Submit to current jobs Report
       </button>
     </div>
+</div>
 
-  </ion-scroll>
 
 </ion-content>
+
+
+
+
+
+
+  

@@ -10,12 +10,12 @@ import {Repairs} from "./Repairs/Repairs";
   templateUrl: 'EquipmentSelectedScreen.html'
 })
 export class EquipmentSelectedScreen {
-  public index: number;
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams
   ) {
-    this.index = this.navParams.get("index");
+
   }
 
   onBack() {
@@ -23,9 +23,7 @@ export class EquipmentSelectedScreen {
   }
 
   onLogHours() {
-    this.navCtrl.push(LogHours, {
-      index: this.index
-    });
+    this.navCtrl.push(LogHours);
   }
 
   onRoutineMaintenance() {

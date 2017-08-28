@@ -16,3 +16,275 @@
 // automatically applied to the <body> element in the app.
 
 @import '../theme/global';
+
+
+ion-app.ios [padding1], ion-app.ios [padding1] .scroll-content {padding:25px !important;}
+* {font-family:'Saira' !important;}
+
+
+ion-content.setunivbuttons button {background:#3a5914 !important;color:#FFF;border-radius:2px !important;
+	display:block !important;width:100% !important;font-size:18px !important;padding:10px;
+	height:55px !important;background-image:url("../assets/images/rightunit.png") !important;
+	background-repeat:no-repeat !important;background-size:contain !important;
+	background-position:right !important;
+
+}
+ion-content .button-inner {text-align:left !important;-webkit-box-align: left;
+    -webkit-align-items: left;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: left;
+    -webkit-justify-content: left;
+    -ms-flex-pack: left;
+    justify-content: left;}
+.iconback-global {display:none;}
+ion-input {background:#f7f7f7 !important;border-radius:4px;border:1px solid #f1f0f0;padding-left:15px;}
+.button-ios {margin:0px;}
+
+ion-content button:before {position:absolute;width:10px;height:10px;content:'';
+	border-top:1px solid #FFF;border-right:1px solid #FFF;right:20px;transform:rotate(45deg);top:21px;}
+	ion-content.setunivbuttons button.activated {background:#70a232 !important;}
+	ion-header ion-title .toolbar-title {font-weight:400 !important;color:#70a232 !important;}
+
+.set1 .scroll-content {}
+.set1 {background-image:url('../assets/images/j987.jpg');background-repeat:no-repeat;background-position:center;background-size:cover;}
+
+.header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios {border-color:rgba(0, 0, 0, 0.16);}
+
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {color:#3a5914;background:linear-gradient(to bottom right, whitesmoke, white);}
+.spec123 {background-image:url('../assets/images/backbgs.png');background-size:cover;background-position:center;}
+
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {background:initial !important;}
+
+.tcenter {text-align:center;}
+.ftitle {font-size:20px;}
+.specsmalls {font-weight:600;color:#333;}
+.cwhite {color:#FFF;}
+.trititle {font-weight:400;color:#333;font-size:18px;line-height:1;padding-bottom:3px;color:#3a5914;}
+.settrion ion-icon {color:#333;position:absolute;left:15px;font-size:30px;top:14px;}
+.settrion {position:relative;border-bottom:1px solid #eee;padding:25px;background:#fff;
+	padding-left:80px;padding-right:30px;background-image:url('http://i.imgur.com/rvRtKbt.png');
+background-repeat:no-repeat;background-position:right 15px center;background-size:20px 20px;
+margin-bottom:10px;}
+.trisubline {line-height:1.3;color:#929292;}
+.settrion img.one {position:absolute;width:40px;left:20px;top:33px;}
+.settrion img.two {position:absolute;width:37px;left:22px;top:36px;}
+.settrion img.three {position:absolute;width:37px;left:22px;top:33px;}
+.jsone {color:#3a5914;}
+.jstwo {color:#70a232;}
+.topbanne {background-image:url('http://i.imgur.com/IQ2p6gt.jpg');background-repeat:no-repeat;background-position:-200px -250px;}
+.secondwrap {padding:20px;background:rgba(255, 255, 255, 0.78);}
+
+.removebacks .back-button , .logout134 {display:none !important;}
+.topavatar {position:absolute;top:25px;right:10px;width:30px;border-radius:100%;box-shadow:0px 0px 7px #b1b1b1;}
+
+.heights1 {height:40px;width:2px;background:#c6d2b7;position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;} 
+.heights2 {height:2px;width:45px;background:#c6d2b7;position:absolute;left:0px;right:0px;top:0px;bottom:0px;margin:auto;}
+.setsquares {height:75px;width:75px;margin:auto;position:relative;border:2px solid #c6d2b7;border-radius:100%;}
+.squarecontainer {padding:20px;padding-top:5px;}
+.sam13 {height:161px;position:absolute;top:0px;bottom:0px;left:0px;right:0px;margin:auto;}
+.startset {height:50vh;background:linear-gradient(to bottom right, white, #d2d2d2);position:relative;}
+.gj123 , .gj456 {color:#a9a9a9;}
+.spec001 {font-size:17px;}
+
+.secondunits .floatbi.one {height:25vh;background:linear-gradient(to bottom right, #a1e251, #cbf399);}
+.secondunits .floatbi.two {height:25vh;background:linear-gradient(to bottom right, #d6fba8, #e6ffc8);}
+
+.floatbi {width:50%;float:left;height:50vh;position:relative;}
+
+.innerjv1 {height:76px;position:absolute;top:0px;bottom:0px;left:0px;right:0px;margin:auto;}
+.setone4 {background:#3a5914;padding:15px;color:#fff;}
+.resttwo1 {background:#fff;padding:15px;color:#3a5914;}
+
+.juniques {margin-bottom:15px;box-shadow:0px 0px 10px #adadad;border-radius:4px;
+	background-image: url(http://i.imgur.com/Afw0WWe.png);
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 15px 15px;padding-left:70px;padding-right:35px;position:relative;}
+.topset1 {font-weight:500;font-size:16px;}
+.topset2 {color:#a2a2a2;}
+.setone4 .topset2 {color:#e0e0e0;}
+
+.juniques img {width:40px;position:absolute;left:15px;top:29px;}
+.pageten1 {background: rgb(242, 242, 242);background-image: url(http://i.imgur.com/grRMCGw.jpg);background-position: bottom;background-size: cover;
+}
+.pageten1 .scroll-content {background-color:rgba(255, 255, 255, 0.77);}
+
+.juniques.three img {top:18px;}
+
+.juniques.secondary {margin-bottom:0px;background-image:none;background:none;box-shadow:none;-webkit-box-shadow:none;}
+.juniques.secondary img {top:23px;width:30px;left:20px;}
+.juniques.secondary .topset1 {color:#425f1d;}
+.juniques.secondary .topset2 {color:#737373;}
+.inputsten {padding:0px 13px;width:100%;border-radius: 2px;font-size:16px;
+	box-shadow: 0px 0px 20px rgba(78, 78, 78, 0.21);border: 0px solid #e6e6e6;margin-bottom:15px;
+border-left:0px solid #425f1d;}
+
+.buttonsub1s {color:#FFF;font-size:16px;background-color:#425f1d;padding:15px;border-radius:2px;background-image:url('http://i.imgur.com/THWiGFd.png');
+background-position:right 15px center;background-repeat:no-repeat;background-size:20px 20px;}
+.titleunits1 {padding:15px;padding-top:30px;padding-bottom:1px;font-weight:500;color:#6d6d6d;line-height:1;}
+.mainjsets {background:rgba(255, 255, 255, 0.69);box-shadow:0px 0px 10px #adadad;}
+.sendwraps1 {padding:15px;background: rgba(255, 255, 255, 0.58);box-shadow:0px 0px 20px #c1c1c1;}
+
+page-newjob .scroll-content {overflow-y:initial !important;}
+
+.buttonnotes {background:#fff;padding:13px;color:#70a232;border-left:51px solid #70a232;position:relative;background-image:url('http://i.imgur.com/Afw0WWe.png');background-size:15px 15px;background-position:right 10px center;background-repeat:no-repeat;border-radius:2px;}
+.buttonnotes img {position:absolute;width:30px;left:-40px;top:10px;}
+
+.padspec7 {padding:15px;padding-bottom:1px;}
+.toptextholds {border-radius:4px;overflow:hidden;background:#FFF;box-shadow:0px 0px 10px #c7c7c7;}
+.placedirects {padding:15px;background:#f2f2f2;color:#676767;}
+.notestexts {-webkit-appearance:none;resize:none;border:0px solid;width:100%;height:calc(50vh - 64px);padding:15px;}
+.pad15 {padding:15px;}
+.photobutton1 {background:#fff;padding:10px;border-radius:2px;box-shadow:0px 0px 10px #c7c7c7;}
+.photobutton1 img {width:40px;margin:auto;display:block;}
+.textphotobt {text-align:center;font-size:20px;color:#dfdfdf;}
+.sendwraps1.notesa {background:none;box-shadow:none;padding-top:1px;}
+
+
+.numsettings {width:100px;height:100px;background:#eaeaea;position:relative;float:left;}
+.numsettings:before {font-weight:300;line-height:2.27;position:absolute;color:#fff;font-size:44px;height:100px;width:100%;left:0px;right:0px;top:0px;bottom:0px;margin:auto;text-align:center;}
+
+.fieldunittops img {position:absolute;width:20px;}
+.fieldunittops .fieldtext1 {padding-left:25px;}
+
+.fieldtext1.first {color:#444444;}
+.fieldtext1.seconds {font-weight:300;margin-top:3px;color:#7d7d7d;}
+.unitoflist1 {margin-bottom:15px;background:#fff;height:100px;border-radius:8px;overflow:hidden;box-shadow:0px 0px 7px #cacaca;}
+.unitoflist1:nth-last-child(1) {margin-bottom:0px;}
+.leftnumberify {width:100px;height:100px;background:#eaeaea;position:relative;float:left;}
+.maincontlist {width:calc(100% - 100px);position:relative;float:left;height:100px;}
+.topcont01 {height:60px;position:relative;}
+.editcontain1 {width:35px;height:35px;background:#eee;position:absolute;top:12px;right:12px;border-radius:4px;}
+.iconimg1 {width:20px;height:20px;margin:auto;position:absolute;top:0px;left:0px;right:0px;bottom:0px;}
+.firstunitleft {padding:5px;padding-top:10px;}
+.tablethirds1 {display:table;width:100%;border-top:1px solid #eee;position:absolute;bottom:0px;left:0px;right:0px;}
+.thirdfirst1 {width:33.3333%;float:left;height:40px;}
+.triotitle1 {font-size:8px;color: #585858;padding-left: 5px;padding-top: 2px;}
+.triodisplay1 {padding-left:5px;color:#70a232;}
+.triosecond2 {width:33.3333%;float:left;border-left:1px solid #eee;border-right:1px solid #eee;height:40px;}
+.triothird3 {width:33.3333%;float:left;height:40px;}
+.projdrops1 {margin: 0px;
+margin-bottom: 15px;
+border-radius: 2px;
+box-shadow: 0px 0px 20px rgba(78, 78, 78, 0.21);}
+
+.unitoflist1:nth-child(1) .numsettings:before {content:'1'}
+.unitoflist1:nth-child(2) .numsettings:before {content:'2'}
+.unitoflist1:nth-child(3) .numsettings:before {content:'3'}
+.unitoflist1:nth-child(4) .numsettings:before {content:'4'}
+.unitoflist1:nth-child(5) .numsettings:before {content:'5'}
+.unitoflist1:nth-child(6) .numsettings:before {content:'6'}
+.unitoflist1:nth-child(7) .numsettings:before {content:'7'}
+.unitoflist1:nth-child(8) .numsettings:before {content:'8'}
+.unitoflist1:nth-child(9) .numsettings:before {content:'9'}
+.unitoflist1:nth-child(10) .numsettings:before {content:'10'}
+.unitoflist1:nth-child(11) .numsettings:before {content:'11'}
+.unitoflist1:nth-child(12) .numsettings:before {content:'12'}
+.unitoflist1:nth-child(13) .numsettings:before {content:'13'}
+.unitoflist1:nth-child(14) .numsettings:before {content:'14'}
+.unitoflist1:nth-child(15) .numsettings:before {content:'15'}
+.unitoflist1:nth-child(16) .numsettings:before {content:'16'}
+.unitoflist1:nth-child(17) .numsettings:before {content:'17'}
+.unitoflist1:nth-child(18) .numsettings:before {content:'18'}
+.unitoflist1:nth-child(19) .numsettings:before {content:'19'}
+.unitoflist1:nth-child(20) .numsettings:before {content:'20'}
+.unitoflist1:nth-child(21) .numsettings:before {content:'21'}
+.unitoflist1:nth-child(22) .numsettings:before {content:'22'}
+.unitoflist1:nth-child(23) .numsettings:before {content:'23'}
+.unitoflist1:nth-child(24) .numsettings:before {content:'24'}
+
+
+
+.pageten2 {
+    background-image: url(http://i.imgur.com/7lLXjm9.png);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #8db45c;
+}
+
+.pageten2 .scroll-content {background-color:rgba(255, 255, 255, 0.75);}
+
+.bgwhite {background:#FFF;}
+.equipitems {background:#FFF;border-radius: 3px;overflow: hidden;box-shadow: 0px 0px 7px rgba(195, 195, 195, 0.87);background-image: url(http://i.imgur.com/Afw0WWe.png);
+background-repeat: no-repeat;
+background-position: right 15px center;background-position-y:27px;
+background-size: 15px 15px;}
+
+.toolnametitle {padding:10px 15px 2px 15px;font-size:10px;color: #969696;font-weight: 500;text-transform:uppercase;}
+.toolactualname {padding:15px;color: #73a436;padding-top:5px;}
+.toolsmallnote {padding:2px 15px;background:#eee;font-size:10px;color: #969696;font-weight: 500;}
+
+.equipitems {margin-bottom:15px;}
+
+.spec121 {color:#909090;}
+
+.equipfour {padding:29px 15px;background:#FFF;border-left:80px solid #425f1d;color:#75a539;
+	position:relative;background-image: url(http://i.imgur.com/Afw0WWe.png);
+background-repeat: no-repeat;
+background-position: right 15px center;background-position-y:33px;
+background-size: 15px 15px;border-radius:2px;margin-bottom:15px;box-shadow:0px 0px 10px rgba(117, 165, 57, 0.26);}
+.equipfour img {position:absolute;width:40px;left:-60px;top:20px;}
+
+
+.specpad76 {padding:20px;padding-top:0px;background:#f2f2f2;border-radius:4px;box-shadow:0px 0px 10px #c9c9c9;}
+.enterinfo1 {color: #777575;
+    padding-bottom: 25px;padding-left:45px;padding-top:23px;
+    text-align: left;background-image:url('http://i.imgur.com/KaqPQjf.png');background-size:30px 30px;background-repeat:no-repeat;background-position:0px 20px;}
+.mgb12 {margin-bottom:20px;}
+.mgt20 {margin-top:20px;}
+
+.padtop0 {padding-top:0px;}
+.bshad2 {background:#fff;border-radius:4px;overflow:hidden;box-shadow:0px 0px 10px #c9c9c9;}
+.bgsome1 {background:#e6e6e6;}
+.loghist123 {padding: 2px 20px;background: #fff;color: #8e8e8e;font-size: 17px;}
+.tableset8 {display:table;width:100%;border-bottom:1px solid #f1f1f1;color:#a7a7a7;}
+.widthhalf {width:50%;float:left;}
+
+.padleftonly {padding:0px 20px;}
+
+.logunit2 {display:table;width:100%;font-size:17px;border-bottom:1px solid #eee;color:#7aa841;}
+.padunit04 {padding:5px 20px;}
+
+.button04 {
+    background: #3a5914 !important;
+    color: #FFF;
+    border-radius: 2px !important;
+    display: block !important;
+    width: 100% !important;
+    font-size: 18px !important;
+    padding: 10px;
+    height: 55px !important;
+    background-image: url(../assets/images/rightunit.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: right !important;
+}
+
+.checkboxcont {margin-top:15px;border-radius:2px;overflow:hidden;}
+.checkboxcont ion-item {background:#f7f7f7;}
+.checkboxcont ion-label {color:#999999;font-size:14px;}
+.button04 {padding-left:15px;}
+
+.tarea012 {resize:none;-webkit-resize:none;height:100px;width:100%;height: 100px;width: 100%;border:0px solid;background:#f7f7f7;margin-top:20px;padding-left:15px;padding-top:10px;}
+.padr30 {padding-right:30px;}
+
+.setbt20s {margin-bottom:20px;}
+
+.notestexts.doone {height:110px;}
+.padbottom0 {padding-bottom:0px;}
+
+.mainjsets.bgwhite {background:#f8f8f8;}
+
+.settrion:active {background-color:#f6f6f6;}
+.setone4.juniques:active {background-color:#4c751a;}
+.resttwo1.juniques:active {background-color:#f6f6f6;}
+.equipitems:active {background-color:#f6f6f6;}
+.equipfour:active {background-color:#f6f6f6;}
+.button04:active {background:#5d8f20 !important;}
+.buttonsub1s:active {background-color:#5d8f20 !important;}
+.buttonnotes:active {background-color:#f6f6f6;}
+.photobutton1:active {background-color:#f6f6f6;}
+button {padding-left:15px !important;}
+.unitoflist1:active {background:#f6f6f6;}
