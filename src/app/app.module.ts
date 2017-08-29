@@ -29,6 +29,13 @@ import {ApiService} from '../services/apiService';
 import {Spinner} from '../services/spinnerService';
 import {AppSplashScreen} from "../pages/AppSplashScreen/AppSplashScreen";
 import { Camera } from '@ionic-native/camera';
+import {TaskReminder} from "../pages/TaskReminder/TaskReminder";
+import {RepairNeeded} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/Repairs/RepairNeeded/RepairNeeded";
+import {RepairPerformed} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/Repairs/RepairPerformed/RepairPerformed";
+import {CapClean} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/CapClean/CapClean";
+import {ChainOiled} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/ChainOiled/ChainOiled";
+import {ChainTensioned} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/RoutineMaintenance/ChainTensioned/ChainTensioned";
+import {ViewSchedule} from "../pages/EquipmentLogScreen/EquipmentSelectedScreen/ScheduledMaintenance/ViewSchedule/ViewSchedule";
 
 @NgModule({
   declarations: [
@@ -52,6 +59,13 @@ import { Camera } from '@ionic-native/camera';
     MachineWash,
     Grease,
     OtherRoutine,
+    TaskReminder,
+    RepairNeeded,
+    RepairPerformed,
+    CapClean,
+    ChainOiled,
+    ChainTensioned,
+    ViewSchedule
   ],
   imports: [
     BrowserModule,
@@ -80,6 +94,13 @@ import { Camera } from '@ionic-native/camera';
     MachineWash,
     Grease,
     OtherRoutine,
+    TaskReminder,
+    RepairNeeded,
+    RepairPerformed,
+    CapClean,
+    ChainOiled,
+    ChainTensioned,
+    ViewSchedule
   ],
   providers: [
     StatusBar,
